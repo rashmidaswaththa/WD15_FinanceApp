@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">newFinanceApp</string>
+    <string name="test">test</string>
+    <string name="back_arrow">back arrow</string>
+    <string name="toolbar_title">Manage Bill Reminders</string>
+    <string name="save_button">check</string>
+    <string name="title_displaylist">All Bill Reminders</string>
+    <string name="Rtype">Type</string>
+    <string name="Ramount">Amount</string>
+    <string name="Rdate">Due date</string>
+    <string name="Addbtn">Add</string>
+</resources>
