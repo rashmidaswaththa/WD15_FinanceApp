@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">newFinanceApp</string>
+    <string name="test">test</string>
+    <string name="back_arrow">back arrow</string>
+    <string name="toolbar_title">Manage Expenses</string>
+    <string name="title_displaylist">All Expenses</string>
+    <string name="save_button">check</string>
+    <string name="expense_note">Note</string>
+    <string name="addExpense_field2">Amount</string>
+    <string name="addExpense_field3">Payment Method</string>
+    <string name="addExpense_textfield4">Category</string>
+    <string name="uplaod_pic">Attachments</string>
+    <string name="addExpense_imageinsert">attachment</string>
+    <string name="addExpense_uploadimage">Upload image</string>
+    <string name="toolbar_displaylist_verticon">vertiv=cal_navigation</string>
+
+    <string-array name="Payment_method">
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Check</item>
+        <item>Debit</item>
+
+    </string-array>
+
+    <string-array name="expense_category">
+        <item>Health</item>
+        <item>Food</item>
+        <item>Education</item>
+        <item>Family</item>
+        <item>Clothes</item>
+        <item>Loans</item>
+        <item>Home Office</item>
+        <item>Other</item>
+
+    </string-array>
+</resources>
