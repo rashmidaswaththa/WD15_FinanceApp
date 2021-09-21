@@ -12,8 +12,9 @@
     <string name="all_income">all income</string>
     <string name="update_note">Note</string>
     <string name="update_amount">Amount</string>
-    <string name="update_category">Category</string>
     <string name="update_button">UPDATE</string>
+    <string name="update_category">Category</string>
+    <string name="updatebutton">Update</string>
     <string-array name="income_category">
         <item>Sallary</item>
         <item>Savings</item>
