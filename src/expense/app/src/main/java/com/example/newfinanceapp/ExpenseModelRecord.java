@@ -3,13 +3,20 @@ package com.example.newfinanceapp;
 public class ExpenseModelRecord {
 
     //variables
-    String note, amount, pay_method, category;
+    String id ,note, amount, pay_method, category;
+    byte [] image;
 
     //constructor
 
 
-    public ExpenseModelRecord(String note, String amount, String pay_method, String category) {
+    public ExpenseModelRecord() {
+
+    }
+
+    public ExpenseModelRecord(String id, String note, byte [] image, String amount, String pay_method, String category) {
+        this.id = id;
         this.note = note;
+        this.image = image;
         this.amount = amount;
         this.pay_method = pay_method;
         this.category = category;
@@ -17,8 +24,17 @@ public class ExpenseModelRecord {
 
     //getters and setters
 
+
+    public String getId() {
+        return id;
+    }
+
     public String getNote() {
         return note;
+    }
+
+    public byte[] getImage() {
+        return image;
     }
 
     public String getAmount() {
@@ -35,6 +51,14 @@ public class ExpenseModelRecord {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     public void setAmount(String amount) {

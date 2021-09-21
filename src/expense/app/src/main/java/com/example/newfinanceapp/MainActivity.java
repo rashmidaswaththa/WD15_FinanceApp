@@ -1,17 +1,13 @@
 package com.example.newfinanceapp;
 
 import android.Manifest;
-import android.content.ContentValues;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -24,9 +20,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.activity.result.contract.ActivityResultContracts;
 
-import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     //Image attachment
     private ImageView imageView;
     private ImageButton imageButton;
-    private ImageButton cameraButton;
+    //private ImageButton cameraButton;
 
     //insert form
     private EditText note_text;
@@ -49,18 +45,19 @@ public class MainActivity extends AppCompatActivity {
     private String categoryDB;
     private Bitmap imageDB;
 
-    private Uri imageUri;
+    private Uri selectedImageUri;
 
     //permission constants
-    //private static final int CAMERA_REQUEST_CODE= 1001;
+
     private static final int STORAGE_REQUEST_CODE= 1000;
+    private static final int SELECT_PICTURE = 100;
+    private static final String TAG = "StoreImageActivity";
 
     //image pick code
-    private static final int IMAGE_PICK_CAMERA_CODE = 1002;
-    private static final int IMAGE_PICK_GALLERY_CODE = 1003;
+    //private static final int IMAGE_PICK_CAMERA_CODE = 1002;
+     //private static final int IMAGE_PICK_GALLERY_CODE = 1003;
 
     //arrays of permisiions
-    //private String [] cameraPermissions;
     private String [] storagePermissions;
 
 
@@ -78,15 +75,15 @@ public class MainActivity extends AppCompatActivity {
 
         //Expense insert form
 
-        EditText note_text = findViewById(R.id.addField1_text);
-        EditText amount_text = findViewById(R.id.addField2_text);
-        Spinner s1 = (Spinner) findViewById(R.id.paymethod_list);
-        Spinner s2 = (Spinner) findViewById(R.id.category_list);
+        note_text = findViewById(R.id.addField1_text);
+        amount_text = findViewById(R.id.addField2_text);
+         s1 = (Spinner) findViewById(R.id.paymethod_list);
+         s2 = (Spinner) findViewById(R.id.category_list);
 
         //views
         imageView = findViewById(R.id.insertImage);
         imageButton = findViewById(R.id.uploadImage_btn);
-        cameraButton = findViewById(R.id.camera_button);
+        //cameraButton = findViewById(R.id.camera_button);
 
         //date base connection
         DB = new MyDatabaseHelper(this);
@@ -106,19 +103,27 @@ public class MainActivity extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String note = note_text.getText().toString().trim();
-                String amount = amount_text.getText().toString().trim();
-                String pay = s1.getSelectedItem().toString().trim();
-                String cat = s2.getSelectedItem().toString().trim();
 
-                //byte[] image = onActivityResult(requestCode, resultCode, data).image;
-                Boolean insert = DB.insertData(note, amount, pay, cat);
+              try {
+                      String note = note_text.getText().toString().trim();
+                      InputStream iStream = getContentResolver().openInputStream(selectedImageUri);
+                      byte[] inputData = ExpenseUtils.getBytes(iStream);
+                      String amount = amount_text.getText().toString().trim();
+                      String pay = s1.getSelectedItem().toString().trim();
+                      String cat = s2.getSelectedItem().toString().trim();
 
-                if(insert == true){
-                    Toast.makeText(MainActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(MainActivity.this, "Failed!" , Toast.LENGTH_SHORT).show();
-                }
+                      //byte[] image = onActivityResult(requestCode, resultCode, data).image;
+                      boolean insert = DB.insertData(note, inputData, amount, pay, cat);
+
+                      if (insert) {
+                          Toast.makeText(MainActivity.this, "Inserted Successfully", Toast.LENGTH_SHORT).show();
+                      } else {
+                          Toast.makeText(MainActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
+                      }
+
+                }catch (IOException ioe){
+                  Log.e(TAG, " Error : " + ioe.getLocalizedMessage());
+              }
 
 
             }
@@ -160,29 +165,6 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        cameraButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // check runtime permission
-//                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-//                    if(!checkCamerapermission()){
-//                        requestCamerapermission();
-//                    }else{
-//                        //permission already granted
-//                        pickImageFromCamera();
-//
-//                    }
-//                }else{
-//                    ////system os is less than marshmallow
-//                    pickImageFromCamera();
-//
-//                }
-
-                pickImageFromCamera();
-
-            }
-
-        });
     }
 
     private boolean checkStoragepermission(){
@@ -197,60 +179,22 @@ public class MainActivity extends AppCompatActivity {
         ActivityCompat.requestPermissions(this, storagePermissions,STORAGE_REQUEST_CODE);
     }
 
-//    private boolean checkCamerapermission(){
-//        //check if storage permission is enabled or not
-//
-//        boolean result = ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA) == (PackageManager.PERMISSION_GRANTED);
-//        boolean result1 = ContextCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE ) == (PackageManager.PERMISSION_GRANTED);
-//        return result && result1;
-//    }
-
-//    private void requestCamerapermission(){
-//        //request the camera permission
-//        ActivityCompat.requestPermissions(this, cameraPermissions,CAMERA_REQUEST_CODE);
-//
-//    }
-
-
 
     //pick image from gallery
     private void pickImageFromGallery() {
         //intent to pick image
-        Intent intent = new Intent(Intent.ACTION_PICK);
+        Intent intent = new Intent();
         intent.setType("image/*");
-        startActivityForResult(intent , IMAGE_PICK_GALLERY_CODE);
-
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE);
     }
 
-    //pick image from camera
-    private void pickImageFromCamera() {
 
-
-        //put image uri
-        //imageUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, val );
-        //intent to pick image
-
-        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        //cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
-        startActivityForResult(cameraIntent, IMAGE_PICK_CAMERA_CODE);
-
-    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
-//            case CAMERA_REQUEST_CODE: {
-//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//
-//                    //permission was granted
-//                    pickImageFromCamera();
-//                } else {
-//                    //permission was denied
-//                    Toast.makeText(this, "Permission denied..!", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//         break;
             case STORAGE_REQUEST_CODE: {
                 if ((grantResults.length > 0) && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
 
@@ -304,21 +248,14 @@ public class MainActivity extends AppCompatActivity {
 //            byte image [] = stream.toByteArray();
 //        }
 
-
-        if(resultCode == RESULT_OK && requestCode == IMAGE_PICK_GALLERY_CODE){
-            //image is picked
-            imageView.setImageURI(data.getData());
-            //imageView.setImageURI(imageUri);
-
+        if (resultCode == RESULT_OK) {
+            if (requestCode == SELECT_PICTURE) {
+                selectedImageUri = data.getData();
+                if (null != selectedImageUri) {
+                    imageView.setImageURI(selectedImageUri);
+                }
             }
-            else if(requestCode == IMAGE_PICK_CAMERA_CODE){
-                //picked from camera
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-            imageView.setImageBitmap(photo);
-                //crop image
-               // imageView.setImageURI(imageUri);
-
-            }
+        }
 
 
         }
