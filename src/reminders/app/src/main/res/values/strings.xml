@@ -9,4 +9,10 @@
     <string name="Ramount">Amount</string>
     <string name="Rdate">Due date</string>
     <string name="Addbtn">Add</string>
+    <string name="rem_type">Type</string>
+    <string name="addReminder_field2">amount</string>
+    <string name="addReminder_field3">Due date</string>
+    <string name="updatebtn">Update</string>
+
+
 </resources>

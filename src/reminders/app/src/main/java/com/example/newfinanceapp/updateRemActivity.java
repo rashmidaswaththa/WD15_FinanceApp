@@ -1,6 +1,5 @@
 package com.example.newfinanceapp;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,11 +24,11 @@ public class updateRemActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_income);
+        setContentView(R.layout.activity_update_reminder);
 
         type_input = findViewById(R.id.updateField1_text);
         amount_input = findViewById(R.id.updateField2_text);
-        date_input = findViewById(R.id.updateField3_text);
+        date_input = findViewById(R.id.updateDate3);
         update_button = findViewById(R.id.update_button);
         back_button2 = findViewById(R.id.back_button2);
         delete_button = findViewById(R.id.delete_button);
