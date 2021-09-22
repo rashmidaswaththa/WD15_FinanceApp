@@ -15,7 +15,7 @@ public class addActivity extends AppCompatActivity {
 
     EditText goalNameInput, goalAmountInput, goalDesInput;
     Button add_button;
-
+    ImageButton back_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,14 @@ public class addActivity extends AppCompatActivity {
                 }
             }
         });
+
+         back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (addActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+         });
 
         ImageView left_arrow = findViewById(R.id.left_arrow);
         ImageView check = findViewById(R.id.check);
