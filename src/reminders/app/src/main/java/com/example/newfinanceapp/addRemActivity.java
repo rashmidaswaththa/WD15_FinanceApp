@@ -2,10 +2,12 @@ package com.example.newfinanceapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,16 +16,18 @@ public class addRemActivity extends AppCompatActivity {
 
     EditText Rtype_input, Ramount_input,Rdate_input;
     Button add_button;
+    ImageButton back_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_Rem);
+        setContentView(R.layout.activity_add_rem);
 
         Rtype_input = findViewById(R.id.addReminder_text);
         Ramount_input = findViewById(R.id.addReminder2_text);
         Rdate_input = findViewById(R.id.ReminderTextDate);
         add_button = findViewById(R.id.add_button);
+        back_button = findViewById(R.id.back_button);
 
         MyRemDatabaseHelper myDB = new MyRemDatabaseHelper(addRemActivity.this);
         add_button.setOnClickListener(new View.OnClickListener(){
@@ -42,6 +46,14 @@ public class addRemActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(addRemActivity.this, "Error!!" , Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(addRemActivity.this, MainRemActivity.class);
+                startActivity(intent);
             }
         });
 

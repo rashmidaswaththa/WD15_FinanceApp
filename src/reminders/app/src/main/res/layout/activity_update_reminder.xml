@@ -15,13 +15,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/addReminder_field1"
-        android:layout_width="62dp"
-        android:layout_height="36dp"
+        android:id="@+id/updateReminder_field1"
+        android:layout_width="63dp"
+        android:layout_height="28dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="345dp"
-        android:text="@string/Rtype"
+        android:text="Type"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/addReminder_text"
+        android:id="@+id/updateField1_text"
         android:layout_width="@dimen/addField1_textwidth"
         android:layout_height="@dimen/addField1_textheight"
         android:layout_marginStart="36dp"
@@ -40,25 +40,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addReminder_field1" />
+        app:layout_constraintTop_toBottomOf="@+id/updateReminder_field1" />
 
     <TextView
-        android:id="@+id/addReminder_field2"
+        android:id="@+id/updatereminder_field2"
         android:layout_width="112dp"
         android:layout_height="45dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="350dp"
-        android:text="@string/Ramount"
+        android:text="Amount"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addReminder_text" />
+        app:layout_constraintTop_toBottomOf="@+id/updateField1_text" />
 
     <EditText
-        android:id="@+id/addReminder2_text"
+        android:id="@+id/updateField2_text"
         android:layout_width="@dimen/addField2_textwidth"
         android:layout_height="@dimen/addField2_textheight"
         android:layout_marginStart="36dp"
@@ -69,50 +69,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addReminder_field2" />
+        app:layout_constraintTop_toBottomOf="@+id/updatereminder_field2" />
 
     <TextView
-        android:id="@+id/addField3_text"
+        android:id="@+id/textView3"
         android:layout_width="134dp"
         android:layout_height="38dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="327dp"
-        android:text="@string/Rdate"
+        android:text="Due date"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addReminder2_text" />
+        app:layout_constraintTop_toBottomOf="@+id/updateField2_text" />
 
     <Button
-        android:id="@+id/add_button"
+        android:id="@+id/update_button"
         android:layout_width="192dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="204dp"
+        android:layout_marginBottom="264dp"
         android:backgroundTint="#74009688"
-        android:text="@string/Addbtn"
+        android:text="Update"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/ReminderTextDate"
-        android:layout_width="386dp"
-        android:layout_height="43dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/include"
-        app:layout_constraintEnd_toStartOf="@+id/include"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toEndOf="@+id/include"
-        app:layout_constraintTop_toBottomOf="@+id/addField3_text"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageButton
-        android:id="@+id/back_button"
+        android:id="@+id/back_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="732dp"
@@ -121,6 +108,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintVertical_bias="0.847"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+    <EditText
+        android:id="@+id/updateDate3"
+        android:layout_width="305dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintEnd_toStartOf="@+id/include"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toEndOf="@+id/include"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
