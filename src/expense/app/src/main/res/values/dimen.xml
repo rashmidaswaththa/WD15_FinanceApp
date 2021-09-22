@@ -4,4 +4,13 @@
 
     <dimen name="addField1_textwidth">350dp</dimen>
     <dimen name="addField1_textheight">40dp</dimen>
+
+    //login
+    <dimen name="input_height">48dp</dimen>
+    <dimen name="input_width">329dp</dimen>
+    <dimen name="input_text_size">18dp</dimen>
+    <dimen name="input_text_leftpadding">15dp</dimen>
+    <dimen name="first_button_width">278dp</dimen>
+    <dimen name="first_button_height">67dp</dimen>
+
 </resources>

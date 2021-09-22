@@ -33,4 +33,13 @@
         <item>Other</item>
 
     </string-array>
+
+    //login
+    <string name="reg_text">Register</string>
+    <string name="reg_text2">Register and start managine your finances</string>
+    <string name="reg_hint"> Username</string>
+    <string name="reg_password">Password</string>
+    <string name="reg_btn">Register</string>
+    <string name="reg_text3">Already have an account?, Login</string>
+    <string name="reg_usericon">Register user icon</string>
 </resources>

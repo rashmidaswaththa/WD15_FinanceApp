@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".UpdateExpenseActivity">
+
 
     <include
         android:id="@+id/include"
@@ -169,6 +170,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addExpense_field5"
-        app:srcCompat="@drawable/ic_round_collections_24" />
+        android:src="@drawable/ic_display_bill" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
