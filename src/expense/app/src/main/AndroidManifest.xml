@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewFinanceApp">
-        <activity android:name=".UpdateExpenseActivity"></activity>
+        <activity android:name=".UpdateExpenseActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SecondActivity">
             <intent-filter>
