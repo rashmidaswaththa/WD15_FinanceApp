@@ -69,29 +69,30 @@ public class UpdateExpenseActivity extends AppCompatActivity {
 
     }
 
-//    private void showRecordDetails() {
-//        //get data
-//        String query = "SELECT * FROM expense WHERE  _id =" +recordId+ " ";
-//        SQLiteDatabase database = DB.getReadableDatabase();
-//        Cursor cursor = database.rawQuery(query, null);
-//
-//        do{
-//            String id = " "+cursor.getString(cursor.getColumnIndex("_id"));
-//            String note = ""+cursor.getString(cursor.getColumnIndex("expense_note"));
-//            String amount = ""+cursor.getString(cursor.getColumnIndex("expense_amount"));
-//            String method = ""+cursor.getString(cursor.getColumnIndex("payment_method"));
-//            String category = ""+cursor.getString(cursor.getColumnIndex("expense_category"));
-//
-//            note_text.setText(note);
-//
-//            amount_text.setText(amount);
-//
-//            note_text.setText(note);
-//        }while(cursor.moveToNext());
-//
-//
-//
-//    }
+    private void showRecordDetails() {
+        //get data
+        String query = "SELECT * FROM expense WHERE  _id =" +recordId+ " ";
+        SQLiteDatabase database = DB.getReadableDatabase();
+        Cursor cursor = database.rawQuery(query, null);
+
+        do{
+            String id = " "+cursor.getString(cursor.getColumnIndex("_id"));
+            String note = ""+cursor.getString(cursor.getColumnIndex("expense_note"));
+            String image = ""+cursor.getString(cursor.getColumnIndex("expense_image"));
+            String amount = ""+cursor.getString(cursor.getColumnIndex("expense_amount"));
+            String method = ""+cursor.getString(cursor.getColumnIndex("payment_method"));
+            String category = ""+cursor.getString(cursor.getColumnIndex("expense_category"));
+
+            note_text.setText(note);
+
+            amount_text.setText(amount);
+
+            note_text.setText(note);
+        }while(cursor.moveToNext());
+
+
+
+    }
 
 
 }

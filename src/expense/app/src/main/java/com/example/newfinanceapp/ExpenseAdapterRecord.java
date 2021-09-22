@@ -64,7 +64,7 @@ public class ExpenseAdapterRecord extends RecyclerView.Adapter<ExpenseAdapterRec
         holder.recordIv.setImageBitmap(bitmap);
 
         //handle item clicks
-        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent (context, UpdateExpenseActivity.class);
@@ -88,7 +88,7 @@ public class ExpenseAdapterRecord extends RecyclerView.Adapter<ExpenseAdapterRec
         //VIEWS
         ImageView recordIv;
         TextView note, category, amount, pMethod;
-        LinearLayout mainLayout;
+        //LinearLayout mainLayout;
 
 
         public HolderRecord(@NonNull  View itemView) {

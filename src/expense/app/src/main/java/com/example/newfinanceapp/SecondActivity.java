@@ -31,7 +31,7 @@ public class SecondActivity extends AppCompatActivity {
         //Tool bar
         ImageView left_arrow = findViewById(R.id.left_arrow);
         ImageView check = findViewById(R.id.check);
-        TextView title = findViewById(R.id.title);
+        TextView title = findViewById(R.id.title_displaylist);
 
         //display list and floating action button
         recycle_view = findViewById(R.id.dataDisplay_listRv);
@@ -59,18 +59,18 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-        check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(SecondActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
-            }
-        });
+//        check.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(SecondActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         title.setText("Manage Expense");
     }
 
     private void loadRecords() {
-        ExpenseAdapterRecord adapterRecord = new ExpenseAdapterRecord(SecondActivity.this, DB.getAllRecords("MAX(_id)"));
+        ExpenseAdapterRecord adapterRecord = new ExpenseAdapterRecord(SecondActivity.this, DB.getAllRecords("_id"));
         recycle_view.setAdapter(adapterRecord);
     }
 
