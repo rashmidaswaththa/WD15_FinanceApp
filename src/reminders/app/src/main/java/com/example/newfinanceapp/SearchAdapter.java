@@ -18,9 +18,9 @@ class SearchViewHolder extends RecyclerView.ViewHolder{
 
     public SearchViewHolder(View itemView){
         super(itemView);
-        type = (TextView)itemView.findViewById(R.id.in_type_txt);
-        amount = (TextView)itemView.findViewById(R.id.in_amount_txt);
-        date = (TextView)itemView.findViewById(R.id.in_date_txt);
+        type = (TextView)itemView.findViewById(R.id.rm_type_txt);
+        amount = (TextView)itemView.findViewById(R.id.rm_amount_txt);
+        date = (TextView)itemView.findViewById(R.id.rm_date_txt);
     }
 
 }
@@ -28,11 +28,11 @@ class SearchViewHolder extends RecyclerView.ViewHolder{
 public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> {
 
     private Context context;
-    private List<Reminder> Reminder;
+    private List<Reminder> reminder;
 
-    public SearchAdapter(Context context, List<Income> income) {
+    public SearchAdapter(Context context, List<Reminder> reminder) {
         this.context = context;
-        this.income = income;
+        this.reminder= reminder;
     }
     @Override
     public SearchViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
@@ -43,9 +43,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> {
 
     @Override
     public void onBindViewHolder( SearchViewHolder holder, int position) {
-        holder.type.setText(income.get(position).getType());
-        holder.amount.setText(income.get(position).getAmount());
-        holder.date.setText(income.get(position).getDate());
+        holder.type.setText(reminder.get(position).getType());
+        holder.amount.setText(reminder.get(position).getAmount());
+        holder.date.setText(reminder.get(position).getDate());
     }
 
     @Override
