@@ -26,6 +26,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private Activity activity;
     private ArrayList income_id, income_note, income_amount, income_category;
 
+    Animation translate_anim;
+
     CustomAdapter(Activity activity, Context context, ArrayList income_id, ArrayList income_note, ArrayList income_amount, ArrayList income_category){
 
         this.activity = activity;
@@ -85,8 +87,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             in_cat_txt = itemView.findViewById(R.id.in_cat_txt);
             mainLayout = itemView.findViewById(R.id.mainLayout);
             //Animate Recyclerview
-            //Animation translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
-           // mainLayout.setAnimation(translate_anim);
+            Animation translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
+            mainLayout.setAnimation(translate_anim);
         }
     }
 }
