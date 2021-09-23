@@ -1,9 +1,9 @@
 package com.example.newfinanceapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,24 +13,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
-
-import android.content.DialogInterface;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class UpdateExpenseActivity extends AppCompatActivity {
 
 
     //views
-
-
-    private EditText note_text, category_text, method_text;
-    private EditText amount_text;
+    private EditText note_text, category_text, method_text,amount_text;
     private Button update_button;
 
 
-    private String recordId;
-
     //db helper
-    ExpenseDatabaseHelper DB;
+    ExpenseDatabaseHelper myDB;
 
 
     String note;
@@ -54,34 +48,35 @@ public class UpdateExpenseActivity extends AppCompatActivity {
         update_button = findViewById(R.id.update_btn);
 
         //init db helper class
-        DB = new ExpenseDatabaseHelper(this);
+        myDB = new ExpenseDatabaseHelper(this);
 
         //Tool bar
-        ImageView left_arrow = findViewById(R.id.left_arrow);
+        ImageButton left_arrow1 = findViewById(R.id.left_arrow1);
         ImageView check = findViewById(R.id.check);
         TextView title = findViewById(R.id.title);
-        ImageView clear = findViewById(R.id.clear);
+        ImageButton clear = findViewById(R.id.clear);
 
         //First we call this
         getAndSetIntentData();
 
-        left_arrow.setOnClickListener(new View.OnClickListener() {
+        left_arrow1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(UpdateExpenseActivity.this, ExpenseMainActivity.class);
                 startActivity(intent);
             }
         });
 
+
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DB = new ExpenseDatabaseHelper(UpdateExpenseActivity.this);
+                myDB = new ExpenseDatabaseHelper(UpdateExpenseActivity.this);
                 note = note_text.getText().toString().trim();
                 amount = amount_text.getText().toString().trim();
                 method = method_text.getText().toString().trim();
                 category = category_text.getText().toString().trim();
-                DB.updateData(id, note, amount, method,  category);
+                myDB.updateData(id, note, amount, method,  category);
 
             }
         });
@@ -96,15 +91,15 @@ public class UpdateExpenseActivity extends AppCompatActivity {
     }
 
     private void getAndSetIntentData() {
-        if (getIntent().hasExtra("_id") && getIntent().hasExtra("expense_note") &&
-                getIntent().hasExtra("expense_amount") && getIntent().hasExtra("payment_method") && getIntent().hasExtra("expense_category")) {
+        if (getIntent().hasExtra("id") && getIntent().hasExtra("note") &&
+                getIntent().hasExtra("amount") && getIntent().hasExtra("method") && getIntent().hasExtra("category")) {
             //Getting Data from Intent
             //Intent intent = new Intent (context, UpdateExpenseActivity.class);
-            recordId = getIntent().getStringExtra("_id");
-            note = getIntent().getStringExtra("expense_note");
-            amount = getIntent().getStringExtra("expense_amount");
-            method = getIntent().getStringExtra("payment_method");
-            category = getIntent().getStringExtra("expense_category");
+             id= getIntent().getStringExtra("id");
+            note = getIntent().getStringExtra("note");
+            amount = getIntent().getStringExtra("amount");
+            method = getIntent().getStringExtra("method");
+            category = getIntent().getStringExtra("category");
 
             //set data
 
@@ -112,6 +107,8 @@ public class UpdateExpenseActivity extends AppCompatActivity {
             amount_text.setText(amount);
             method_text.setText(method);
             category_text.setText(category);
+
+            Log.d("stev", note+" "+amount+" "+method+" "+category);
         } else {
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }
@@ -126,8 +123,8 @@ public class UpdateExpenseActivity extends AppCompatActivity {
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
-                DB.deleteOneRow(recordId);
+                ExpenseDatabaseHelper myDB = new ExpenseDatabaseHelper(UpdateExpenseActivity.this);
+                myDB.deleteOneRow(id);
                 finish();
             }
         });
