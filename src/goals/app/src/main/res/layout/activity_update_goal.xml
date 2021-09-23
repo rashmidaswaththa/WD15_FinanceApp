@@ -9,6 +9,7 @@
     <include
         android:id="@+id/include"
         layout="@layout/toolbar"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,12 +17,12 @@
 
     <TextView
         android:id="@+id/updateGoal_field1"
-        android:layout_width="63dp"
-        android:layout_height="28dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="140dp"
         android:layout_marginEnd="345dp"
-        android:text="@string/income_note"
+        android:text="@string/goalnameupdate"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,12 +45,12 @@
 
     <TextView
         android:id="@+id/updateGoal_field2"
-        android:layout_width="112dp"
-        android:layout_height="45dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="350dp"
-        android:text="@string/addIncome_field2"
+        android:text="@string/goalamountupdate"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,12 +74,12 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="327dp"
-        android:text="@string/addIncome_field3"
+        android:text="@string/goaldescriptionupdate"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,45 +91,48 @@
         android:id="@+id/update_button"
         android:layout_width="192dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginBottom="180dp"
         android:backgroundTint="#74009688"
-        android:text="@string/updatebutton"
+        android:text="update"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/back_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="544dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <EditText
         android:id="@+id/updateField3_text"
-        android:layout_width="327dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="@+id/include"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageButton
         android:id="@+id/delete_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_width="32dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/updateGoal_field1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_delete_24"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
