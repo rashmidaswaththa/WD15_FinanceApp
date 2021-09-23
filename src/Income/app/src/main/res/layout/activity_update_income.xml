@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainIncomeActivity">
 
-    <include
+   <include
         android:id="@+id/include"
         layout="@layout/toolbar_income"
         app:layout_constraintEnd_toEndOf="parent"
@@ -14,40 +14,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/updateIncome_field1"
-        android:layout_width="63dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="345dp"
-        android:text="@string/income_note"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/updateIncome_field1"
+     android:layout_width="63dp"
+     android:layout_height="28dp"
+     android:layout_marginStart="36dp"
+     android:layout_marginTop="180dp"
+     android:layout_marginEnd="345dp"
+     android:text="@string/income_note"
+     android:textSize="24sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.833"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/updateField1_text"
-        android:layout_width="@dimen/addField1_textwidth"
-        android:layout_height="@dimen/addField1_textheight"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateIncome_field1" />
+ <EditText
+     android:id="@+id/updateField1_text"
+     android:layout_width="366dp"
+     android:layout_height="51dp"
+     android:layout_marginStart="36dp"
+     android:layout_marginTop="40dp"
+     android:ems="10"
+     android:inputType="textPersonName"
+     android:textSize="20sp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.0"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/updateIncome_field1" />
 
-    <TextView
+ <TextView
         android:id="@+id/updateIncome_field2"
         android:layout_width="112dp"
         android:layout_height="45dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="350dp"
         android:text="@string/addIncome_field2"
         android:textSize="26sp"
@@ -57,26 +58,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/updateField1_text" />
 
-    <EditText
-        android:id="@+id/updateField2_text"
-        android:layout_width="@dimen/addField2_textwidth"
-        android:layout_height="@dimen/addField2_textheight"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="172dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateIncome_field2" />
+ <EditText
+     android:id="@+id/updateField2_text"
+     android:layout_width="366dp"
+     android:layout_height="49dp"
+     android:layout_marginStart="36dp"
+     android:layout_marginTop="28dp"
+     android:layout_marginEnd="172dp"
+     android:ems="10"
+     android:inputType="number"
+     android:textSize="20sp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.0"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/updateIncome_field2" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="134dp"
         android:layout_height="38dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="327dp"
         android:text="@string/addIncome_field3"
         android:textSize="26sp"
@@ -86,49 +88,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/updateField2_text" />
 
-    <Button
-        android:id="@+id/update_button"
-        android:layout_width="192dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="264dp"
-        android:backgroundTint="#74009688"
-        android:text="@string/updatebutton"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/include"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+ <Button
+     android:id="@+id/update_button"
+     android:layout_width="387dp"
+     android:layout_height="58dp"
+     android:layout_marginBottom="148dp"
+     android:backgroundTint="#74009688"
+     android:text="@string/updatebutton"
+     android:textSize="24sp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.577"
+     app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageButton
-        android:id="@+id/back_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="544dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+ <ImageButton
+     android:id="@+id/back_button2"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="96dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.069"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
-    <EditText
-        android:id="@+id/updateField3_text"
-        android:layout_width="327dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
-        app:layout_constraintStart_toStartOf="@+id/include"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+ <EditText
+     android:id="@+id/updateField3_text"
+     android:layout_width="366dp"
+     android:layout_height="45dp"
+     android:layout_marginTop="40dp"
+     android:ems="10"
+     android:inputType="textPersonName"
+     android:textSize="20sp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.692"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <ImageButton
-        android:id="@+id/delete_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_delete_24"
-        tools:layout_editor_absoluteY="87dp" />
+ <ImageButton
+     android:id="@+id/delete_button"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginEnd="16dp"
+     android:layout_marginBottom="60dp"
+     app:layout_constraintBottom_toTopOf="@+id/updateIncome_field1"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.967"
+     app:layout_constraintStart_toEndOf="@+id/back_button2"
+     app:srcCompat="@drawable/ic_baseline_delete_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
