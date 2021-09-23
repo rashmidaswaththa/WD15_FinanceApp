@@ -1,6 +1,7 @@
 package com.example.newfinanceapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -23,9 +24,9 @@ public class ExpenseMainActivity extends AppCompatActivity {
     FloatingActionButton floatButton;
 
     //DB helper
-    private ExpenseDatabaseHelper DB;
-
-    ArrayList<ExpenseModelRecord> recordList;
+    ExpenseDatabaseHelper DB;
+    ExpenseAdapterRecord expenseAdapterRecord;
+    ArrayList<String> expense_id, expense_note, expense_amount, expense_paymethod, expense_category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,43 +55,29 @@ public class ExpenseMainActivity extends AppCompatActivity {
         left_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ExpenseMainActivity.this, "You clicked in left icon" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(ExpenseMainActivity.this, "You clicked in left icon", Toast.LENGTH_SHORT).show();
             }
         });
 
         title.setText("Manage Expense");
-        recordList = new ArrayList<>();
+
+        //init db helper class
+        DB = new ExpenseDatabaseHelper(ExpenseMainActivity.this);
+
+        expense_id = new ArrayList<>();
+        expense_note = new ArrayList<>();
+        expense_amount = new ArrayList<>();
+        expense_paymethod = new ArrayList<>();
+        expense_category = new ArrayList<>();
 
         storeDataInArrays();
 
-        ExpenseAdapterRecord adapterRecord = new ExpenseAdapterRecord(ExpenseMainActivity.this, this, recordList);
+        ExpenseAdapterRecord adapterRecord = new ExpenseAdapterRecord(ExpenseMainActivity.this, this, expense_id, expense_note, expense_amount, expense_paymethod, expense_category);
         recycle_view.setAdapter(adapterRecord);
+        recycle_view.setLayoutManager(new LinearLayoutManager(ExpenseMainActivity.this));
 
 
     }
-
-    private void storeDataInArrays() {
-        Cursor cursor = DB.readAllData();
-        ExpenseModelRecord modelRecord;
-
-
-        if(cursor.getCount() == 0){
-            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
-        }else{
-            while (cursor.moveToNext()){
-                modelRecord = new ExpenseModelRecord();
-                modelRecord.setId((cursor.getString(0)));
-                modelRecord.setNote(cursor.getString(1));
-                modelRecord.setAmount(cursor.getString(2));
-                modelRecord.setPay_method(cursor.getString(3));
-                modelRecord.setCategory(cursor.getString(4));
-                recordList.add(modelRecord);
-
-            }
-        }
-    }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -98,4 +85,25 @@ public class ExpenseMainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+    private void storeDataInArrays() {
+        Cursor cursor = DB.readAllData();
+
+        if (cursor.getCount() == 0) {
+            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+        } else {
+            while (cursor.moveToNext()) {
+                expense_id.add(cursor.getString(0));
+                expense_note.add(cursor.getString(1));
+                expense_amount.add(cursor.getString(2));
+                expense_paymethod.add(cursor.getString(3));
+                expense_category.add(cursor.getString(4));
+            }
+        }
+
+    }
 }
+
+
+
+
