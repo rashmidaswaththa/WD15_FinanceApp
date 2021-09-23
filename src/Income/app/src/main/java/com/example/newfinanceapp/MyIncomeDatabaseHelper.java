@@ -5,9 +5,13 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteQueryBuilder;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyIncomeDatabaseHelper extends SQLiteOpenHelper {
 
@@ -96,6 +100,34 @@ public class MyIncomeDatabaseHelper extends SQLiteOpenHelper {
     void deleteAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_NAME);
+    }
+
+    public List<Income> getIncome(){
+
+        SQLiteDatabase db = getReadableDatabase();
+        SQLiteQueryBuilder gb = new SQLiteQueryBuilder();
+
+        //make sure all is column name in your table
+        String[] sqlSelect ={"_id", "income_note", "income_amount", "income_category"};
+        String tableName ="my_income";
+
+        gb.setTables(tableName);
+        //This will like query : select * from my_income where income_note LIKE %pattern%"
+        Cursor cursor = gb.query(db,sqlSelect, "income_category ?",new String[]{"%+category%"}, null, null, null, null);
+        List<Income> result = new ArrayList<>();
+        if(cursor.moveToFirst())
+        {
+            do{
+                Income income = new Income();
+                income.setId(cursor.getInt(cursor.getColumnIndex("_id")));
+                income.setNote(cursor.getString(cursor.getColumnIndex("income_note")));
+                income.setAmount(cursor.getString(cursor.getColumnIndex("income_amount")));
+                income.setCategory(cursor.getString(cursor.getColumnIndex("income_category")));
+
+                result.add(income);
+            }while (cursor.moveToNext());
+        }
+        return result;
     }
 }
 

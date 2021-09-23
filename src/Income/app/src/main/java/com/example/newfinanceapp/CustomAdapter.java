@@ -1,5 +1,6 @@
 package com.example.newfinanceapp;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -48,7 +49,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.in_id_txt.setText(String.valueOf(income_id.get(position)));
         holder.in_note_txt.setText(String.valueOf(income_note.get(position)));
         holder.in_amount_txt.setText(String.valueOf(income_amount.get(position)));

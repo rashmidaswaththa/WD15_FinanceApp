@@ -30,16 +30,20 @@ public class MainIncomeActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     FloatingActionButton add;
 
+    ImageView empty_imageview;
+    TextView no_data;
+
     MyIncomeDatabaseHelper myDB;
     ArrayList<String> income_id, income_note, income_amount, income_category;
     CustomAdapter customAdapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_income);
 
+        empty_imageview = findViewById(R.id.empty_imageview);
+        no_data = findViewById(R.id.no_data);
         recyclerView = findViewById(R.id.recycleView);
         add = findViewById(R.id.add_button);
         add.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +106,9 @@ public class MainIncomeActivity extends AppCompatActivity {
    void storeDataInArrays(){
        Cursor cursor = myDB.readAllData();
         if(cursor.getCount() == 0){
-            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+            empty_imageview.setVisibility(View.VISIBLE);
+            no_data.setVisibility(View.VISIBLE);
+            //Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }else{
             while (cursor.moveToNext()){
                 income_id.add(cursor.getString(0));
@@ -110,6 +116,8 @@ public class MainIncomeActivity extends AppCompatActivity {
                 income_amount.add(cursor.getString(2));
                 income_category.add(cursor.getString(3));
             }
+            empty_imageview.setVisibility(View.GONE);
+            no_data.setVisibility(View.GONE);
         }
     }
 
@@ -119,5 +127,4 @@ public class MainIncomeActivity extends AppCompatActivity {
         inflater.inflate(R.menu.my_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
 }
