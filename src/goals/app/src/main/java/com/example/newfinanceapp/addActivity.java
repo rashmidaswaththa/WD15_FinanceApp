@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class addActivity extends AppCompatActivity {
 
@@ -25,6 +27,7 @@ public class addActivity extends AppCompatActivity {
         goalAmountInput = findViewById(R.id.addField2_text);
         goalDesInput = findViewById(R.id.addFeild_text3);
         add_button = findViewById(R.id.add_button);
+        back_button = findViewById((R.id.back_button));
 
         MyDatabaseHelper myDB = new MyDatabaseHelper(addActivity.this);
         add_button.setOnClickListener(new View.OnClickListener(){
@@ -52,6 +55,14 @@ public class addActivity extends AppCompatActivity {
                 startActivity(intent);
             }
          });
+
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (addActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ImageView left_arrow = findViewById(R.id.left_arrow);
         ImageView check = findViewById(R.id.check);

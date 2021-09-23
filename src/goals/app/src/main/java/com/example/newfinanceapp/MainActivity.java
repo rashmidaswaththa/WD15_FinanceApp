@@ -1,6 +1,8 @@
 package com.example.newfinanceapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -21,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton add;
 
     MyDatabaseHelper myDB;
-    //ArrayList<String> income_id, income_note, income_amount, income_category;
-
+    ArrayList<String> goal_id, goal_name, goal_amount, goal_description;
+    CustomAdapter customAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,29 +67,42 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        title.setText("Manage Income");
+        title.setText("Manage Goals");
 
-//        myDB = new MyDatabaseHelper(MainActivity.this);
-//        income_id = new ArrayList<>();
-//        income_note = new ArrayList<>();
-//        income_amount = new ArrayList<>();
-//        income_category = new ArrayList<>();
-//
-//        storeDataInArrays();
+        myDB = new MyDatabaseHelper(MainActivity.this);
+        goal_id = new ArrayList<>();
+        goal_name = new ArrayList<>();
+        goal_amount = new ArrayList<>();
+        goal_description = new ArrayList<>();
+
+        storeDataInArrays();
+
+        customAdapter = new CustomAdapter(MainActivity.this,this,goal_id, goal_name, goal_amount, goal_description);
+        recyclerView.setAdapter(customAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
     }
 
-//    void storeDataInArrays(){
-//        Cursor cursor = myDB.readAllData();
-//        if(cursor.getCount() == 0){
-//            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
-//        }else{
-//            while (cursor.moveToNext()){
-//                income_id.add(cursor.getString(0));
-//                income_note.add(cursor.getString(1));
-//                income_amount.add(cursor.getString(2));
-//                income_category.add(cursor.getString(3));
-//            }
-//        }
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1)
+        {
+            recreate();
+        }
+    }
+
+    void storeDataInArrays(){
+        Cursor cursor = myDB.readAllData();
+        if(cursor.getCount() == 0){
+            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+        }else{
+            while (cursor.moveToNext()){
+                goal_id.add(cursor.getString(0));
+                goal_name.add(cursor.getString(1));
+                goal_amount.add(cursor.getString(2));
+                goal_description.add(cursor.getString(3));
+            }
+        }
+    }
 
 }
