@@ -16,8 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewFinanceApp">
         <activity android:name=".UpdateExpenseActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SecondActivity">
+        <activity android:name=".ExpenseAddActivity" />
+        <activity android:name=".ExpenseMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
