@@ -3,32 +3,42 @@ package com.example.newfinanceapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+
+import android.content.DialogInterface;
 
 public class UpdateExpenseActivity extends AppCompatActivity {
 
 
     //views
-    private ImageView imageView;
-    private ImageButton imageButton;
-    private EditText note_text;
+
+
+    private EditText note_text, category_text, method_text;
     private EditText amount_text;
-    private Spinner s1;
-    private Spinner s2;
+    private Button update_button;
+
 
     private String recordId;
 
     //db helper
-    MyDatabaseHelper DB;
+    ExpenseDatabaseHelper DB;
+
+
+    String note;
+    String id;
+    String amount;
+    String method;
+    String category;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +46,15 @@ public class UpdateExpenseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_update_expense);
 
         //init views
-        imageView = findViewById(R.id.insertImage);
+
         note_text = findViewById(R.id.addField1_text);
         amount_text = findViewById(R.id.addField2_text);
-        s1 = (Spinner) findViewById(R.id.paymethod_list);
-        s2 = (Spinner) findViewById(R.id.category_list);
-        imageButton = findViewById(R.id.uploadImage_btn);
+        method_text = findViewById(R.id.editText_cash);
+        category_text = findViewById(R.id.editText_category);
+        update_button = findViewById(R.id.update_btn);
 
         //init db helper class
-        DB  = new MyDatabaseHelper(this);
+        DB = new ExpenseDatabaseHelper(this);
 
         //Tool bar
         ImageView left_arrow = findViewById(R.id.left_arrow);
@@ -52,46 +62,84 @@ public class UpdateExpenseActivity extends AppCompatActivity {
         TextView title = findViewById(R.id.title);
         ImageView clear = findViewById(R.id.clear);
 
-
-        //get record id from adapter through intent
-        Intent intent = new Intent();
-        recordId = intent.getStringExtra("_id");
+        //First we call this
+        getAndSetIntentData();
 
         left_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UpdateExpenseActivity.this, "You clicked in left icon" , Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(UpdateExpenseActivity.this, ExpenseMainActivity.class);
+                startActivity(intent);
             }
         });
 
-        //showRecordDetails();
+        update_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DB = new ExpenseDatabaseHelper(UpdateExpenseActivity.this);
+                note = note_text.getText().toString().trim();
+                amount = amount_text.getText().toString().trim();
+                method = method_text.getText().toString().trim();
+                category = category_text.getText().toString().trim();
+                DB.updateData(id, note, amount, method,  category);
 
+            }
+        });
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                confirmDialog();
+            }
+        });
 
     }
 
-//    private void showRecordDetails() {
-//        //get data
-//        String query = "SELECT * FROM expense WHERE  _id =" +recordId+ " ";
-//        SQLiteDatabase database = DB.getReadableDatabase();
-//        Cursor cursor = database.rawQuery(query, null);
-//
-//        do{
-//            String id = " "+cursor.getString(cursor.getColumnIndex("_id"));
-//            String note = ""+cursor.getString(cursor.getColumnIndex("expense_note"));
-//            String amount = ""+cursor.getString(cursor.getColumnIndex("expense_amount"));
-//            String method = ""+cursor.getString(cursor.getColumnIndex("payment_method"));
-//            String category = ""+cursor.getString(cursor.getColumnIndex("expense_category"));
-//
-//            note_text.setText(note);
-//
-//            amount_text.setText(amount);
-//
-//            note_text.setText(note);
-//        }while(cursor.moveToNext());
-//
-//
-//
-//    }
+    private void getAndSetIntentData() {
+        if (getIntent().hasExtra("_id") && getIntent().hasExtra("expense_note") &&
+                getIntent().hasExtra("expense_amount") && getIntent().hasExtra("payment_method") && getIntent().hasExtra("expense_category")) {
+            //Getting Data from Intent
+            //Intent intent = new Intent (context, UpdateExpenseActivity.class);
+            recordId = getIntent().getStringExtra("_id");
+            note = getIntent().getStringExtra("expense_note");
+            amount = getIntent().getStringExtra("expense_amount");
+            method = getIntent().getStringExtra("payment_method");
+            category = getIntent().getStringExtra("expense_category");
+
+            //set data
+
+            note_text.setText(note);
+            amount_text.setText(amount);
+            method_text.setText(method);
+            category_text.setText(category);
+        } else {
+            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    private void confirmDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Delete " + note + " ?");
+        builder.setMessage("Are you sure you want to delete " + note + " ?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                DB.deleteOneRow(recordId);
+                finish();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        builder.create().show();
+
+    }
 
 
 }
