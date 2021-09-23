@@ -4,7 +4,7 @@ public class Reminder {
     public int id;
     public String type, amount, date;
 
-    public Income(int id, String type, String amount, String date){
+    public Reminder(int id, String type, String amount, String date){
         this.id = id;
         this.type = type;
         this.amount = amount;
