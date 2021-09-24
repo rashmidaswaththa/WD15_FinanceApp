@@ -36,16 +36,34 @@ public class addIncomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Boolean insert = myDB.addIncome (note_input.getText().toString().trim(),
-                        amount_input.getText().toString().trim(),
-                        category_input.getText().toString().trim());
+                String note = note_input.getText().toString();
+                String amount = amount_input.getText().toString();
+                String category = category_input.getText().toString();
 
-                if(insert==true){
-                    Toast.makeText(addIncomeActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
+                //making a function for validation and pass all parameters
+                boolean  check= validateinfo(note,amount,category);
+
+                if (check == true) {
+
+                    //when data are in valid formats, input data to the databaase
+                    Boolean insert = myDB.addIncome (note_input.getText().toString().trim(),
+                            amount_input.getText().toString().trim(),
+                            category_input.getText().toString().trim());
+
+                    if(insert==true){
+                        Toast.makeText(addIncomeActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(addIncomeActivity.this, "Error!!" , Toast.LENGTH_SHORT).show();
+                    }
+
+                    Toast.makeText(getApplicationContext(), "Data is valid",Toast.LENGTH_SHORT).show();
                 }
-                else{
-                    Toast.makeText(addIncomeActivity.this, "Error!!" , Toast.LENGTH_SHORT).show();
+                else {
+                    Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
                 }
+
+
             }
 
 
@@ -78,5 +96,37 @@ public class addIncomeActivity extends AppCompatActivity {
         });
 
         title.setText("Manage Income");
+    }
+
+    //validation
+    private boolean validateinfo(String note, String amount, String category) {
+        if (note.length() == 0) {
+            note_input.requestFocus();
+            note_input.setError("THIS FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!note.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            note_input.requestFocus();
+            note_input.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+            return false;
+        } else if (amount.length() == 0) {
+            amount_input.requestFocus();
+            amount_input.setError("FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!amount.matches("\\d+")) {
+            amount_input.requestFocus();
+            amount_input.setError("PLEASE ENTER NUMBERS");
+            return false;
+        } else if (category.length() == 0) {
+            category_input.requestFocus();
+            category_input.setError("FILED CAN NOT BE EMPTY");
+            return false;
+        } else if (!category.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            category_input.requestFocus();
+            category_input.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }
