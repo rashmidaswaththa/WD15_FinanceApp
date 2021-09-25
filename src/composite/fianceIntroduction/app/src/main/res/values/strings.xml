@@ -9,13 +9,19 @@
     //expense
     <string name="expensetext">Know where your  money goes</string>
     <string name="expense_img">expenseimage</string>
-    <string name="expense_text2">Track your expenses easily, with categories and financial report </string>
+    <string name="expense_text2">Track your expenses easily, with categories</string>
     <string name="expense_btntext">Next</string>
     <string name="exp_img">expense_image</string>
 
     //goal
     <string name="goaltext">Set goals</string>
     <string name="goaltext2">Focus on your plan and achieve your goals</string>
-    <string name="incomebtn">Next</string>
-    <string name="incomeimg">incomeimage</string>
+    <string name="goalbtn">Next</string>
+    <string name="goalimg">goalimage</string>
+
+    //bill manager
+    <string name="billtext">Manage bill payments</string>
+    <string name="billtext2">Track your bill payments easily</string>
+    <string name="billbtn">Next</string>
+    <string name="billimg">billimage</string>
 </resources>

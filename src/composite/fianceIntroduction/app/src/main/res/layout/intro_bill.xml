@@ -13,14 +13,14 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/goal_text"
+            android:id="@+id/bill_text"
             android:layout_width="424dp"
             android:layout_height="59dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="sans-serif"
-            android:text="@string/goaltext"
+            android:text="@string/billtext"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="32sp"
@@ -36,21 +36,21 @@
             android:id="@+id/imageView"
             android:layout_width="394dp"
             android:layout_height="301dp"
-            android:contentDescription="@string/incomeimg"
+            android:contentDescription="@string/billimg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_text"
+            app:layout_constraintTop_toBottomOf="@+id/bill_text"
             app:layout_constraintVertical_bias="0.122"
-            app:srcCompat="@drawable/goal_pic" />
+            app:srcCompat="@drawable/bill" />
 
         <TextView
-            android:id="@+id/goaltext"
+            android:id="@+id/billtext2"
             android:layout_width="342dp"
             android:layout_height="69dp"
             android:layout_marginTop="56dp"
-            android:text="@string/goaltext2"
+            android:text="@string/billtext2"
             android:textAlignment="center"
             android:textColor="#073B80"
             android:textSize="20sp"
@@ -60,7 +60,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <Button
-            android:id="@+id/goalbtn"
+            android:id="@+id/billlbtn"
             android:layout_width="@dimen/first_button_width"
             android:layout_height="@dimen/first_button_height"
             android:layout_marginBottom="108dp"
