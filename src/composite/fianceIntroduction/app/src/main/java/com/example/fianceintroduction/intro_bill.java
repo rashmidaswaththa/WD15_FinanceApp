@@ -15,7 +15,7 @@ public class intro_bill extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro_income);
 
-        button1 = findViewById(R.id.goalbtn);
+        button1 = findViewById(R.id.billlbtn);
         Intent intent = new Intent(intro_bill.this, intro_expense.class);
         startActivity(intent);
     }
