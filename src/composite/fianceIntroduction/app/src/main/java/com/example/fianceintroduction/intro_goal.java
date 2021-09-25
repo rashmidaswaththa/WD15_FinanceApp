@@ -15,7 +15,7 @@ public class intro_goal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro_income);
 
-        button1 = findViewById(R.id.incomebtn);
+        button1 = findViewById(R.id.goalbtn);
         Intent intent = new Intent(intro_goal.this, intro_expense.class);
         startActivity(intent);
     }
