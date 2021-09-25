@@ -8,6 +8,29 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FianceIntroduction"></application>
+        android:theme="@style/Theme.FianceIntroduction">
+
+        <activity
+            android:name=".intro_income"
+            android:exported="true" />
+        <activity
+            android:name=".intro_expense"
+            android:exported="true" />
+        <activity
+            android:name=".intro_bill"
+            android:exported="true" />
+        <activity
+            android:name=".intro_goal"
+            android:exported="true" />
+        <activity
+            android:name=".app_main"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
