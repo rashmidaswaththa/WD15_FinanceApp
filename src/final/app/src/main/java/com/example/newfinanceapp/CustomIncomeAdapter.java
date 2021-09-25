@@ -86,6 +86,7 @@ public class CustomIncomeAdapter extends RecyclerView.Adapter<CustomIncomeAdapte
             in_amount_txt = itemView.findViewById(R.id.in_amount_txt);
             in_cat_txt = itemView.findViewById(R.id.in_cat_txt);
             mainLayout = itemView.findViewById(R.id.mainLayout);
+
             //Animate Recyclerview
             Animation translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
             mainLayout.setAnimation(translate_anim);

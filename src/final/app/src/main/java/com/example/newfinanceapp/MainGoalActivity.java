@@ -22,6 +22,9 @@ public class MainGoalActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     FloatingActionButton add;
 
+    ImageView empty_imageview;
+    TextView no_data;
+
     MyDatabaseHelper myDB;
     ArrayList<String> goal_id, goal_name, goal_amount, goal_description;
     CustomGoalAdapter customAdapter;
@@ -30,6 +33,9 @@ public class MainGoalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_goal);
+
+        empty_imageview = findViewById(R.id.empty_imageview);
+        no_data = findViewById(R.id.no_data);
 
         recyclerView = findViewById(R.id.recycleView);
         add = findViewById(R.id.add_button);
@@ -94,7 +100,8 @@ public class MainGoalActivity extends AppCompatActivity {
     void storeDataInArrays(){
         Cursor cursor = myDB.readAllDataGoal();
         if(cursor.getCount() == 0){
-            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+            empty_imageview.setVisibility(View.VISIBLE);
+            no_data.setVisibility(View.VISIBLE);
         }else{
             while (cursor.moveToNext()){
                 goal_id.add(cursor.getString(0));
@@ -102,6 +109,8 @@ public class MainGoalActivity extends AppCompatActivity {
                 goal_amount.add(cursor.getString(2));
                 goal_description.add(cursor.getString(3));
             }
+            empty_imageview.setVisibility(View.GONE);
+            no_data.setVisibility(View.GONE);
         }
     }
 

@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewFinanceApp">
         <activity
+            android:name=".MainExpenseActivity"
+            android:exported="true" />
+        <activity
+            android:name=".piechart_main"
+            android:exported="true" />
+        <activity
+            android:name=".intro_income"
+            android:exported="true" />
+        <activity
+            android:name=".intro_goal"
+            android:exported="true" />
+        <activity
+            android:name=".intro_expense"
+            android:exported="true" />
+        <activity
+            android:name=".intro_bill"
+            android:exported="true" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true" />
+        <activity
             android:name=".RemReportActivity"
             android:exported="true" />
         <activity
@@ -46,7 +67,7 @@
             android:name=".addIncomeActivity"
             android:exported="true" />
         <activity
-            android:name=".MainExpenseActivity"
+            android:name=".app_main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

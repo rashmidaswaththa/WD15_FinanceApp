@@ -23,6 +23,9 @@ public class MainExpenseActivity extends AppCompatActivity {
     RecyclerView recycle_view;
     FloatingActionButton floatButton;
 
+    ImageView empty_imageview;
+    TextView no_data;
+
     //DB helper
     MyDatabaseHelper DB;
     ExpenseAdapterRecord expenseAdapterRecord;
@@ -35,6 +38,9 @@ public class MainExpenseActivity extends AppCompatActivity {
         //Tool bar
         ImageView left_arrow = findViewById(R.id.left_arrow);
         TextView title = findViewById(R.id.title_displaylist);
+
+        empty_imageview = findViewById(R.id.empty_imageview);
+        no_data = findViewById(R.id.no_data);
 
         //display list and floating action button
         recycle_view = findViewById(R.id.dataDisplay_listRv);
@@ -90,7 +96,8 @@ public class MainExpenseActivity extends AppCompatActivity {
         Cursor cursor = DB.readAllDataExpense();
 
         if (cursor.getCount() == 0) {
-            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+            empty_imageview.setVisibility(View.VISIBLE);
+            no_data.setVisibility(View.VISIBLE);
         } else {
             while (cursor.moveToNext()) {
                 expense_id.add(cursor.getString(0));
@@ -99,6 +106,8 @@ public class MainExpenseActivity extends AppCompatActivity {
                 expense_paymethod.add(cursor.getString(3));
                 expense_category.add(cursor.getString(4));
             }
+            empty_imageview.setVisibility(View.GONE);
+            no_data.setVisibility(View.GONE);
         }
 
     }

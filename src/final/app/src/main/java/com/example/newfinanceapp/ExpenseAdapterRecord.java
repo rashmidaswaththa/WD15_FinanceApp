@@ -8,6 +8,8 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,10 +28,9 @@ public class ExpenseAdapterRecord extends RecyclerView.Adapter<ExpenseAdapterRec
     private Activity activity;
     private ArrayList expense_id, expense_note, expense_amount,expense_paymethod, expense_category;
 
+    Animation translate_anim;
 
     //constructor
-
-
     public ExpenseAdapterRecord(Context context, Activity activity, ArrayList expense_id, ArrayList expense_note, ArrayList expense_amount, ArrayList expense_paymethod, ArrayList expense_category) {
         this.context = context;
         this.activity = activity;
@@ -104,7 +105,9 @@ public class ExpenseAdapterRecord extends RecyclerView.Adapter<ExpenseAdapterRec
             category = itemView.findViewById(R.id.category);
             mainLayout = itemView.findViewById(R.id.mainLayout);
 
-
+            //Animate Recyclerview
+            Animation translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
+            mainLayout.setAnimation(translate_anim);
         }
     }
 }
