@@ -42,20 +42,20 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bill_text"
-            app:layout_constraintVertical_bias="0.193"
+            app:layout_constraintVertical_bias="0.059"
             app:srcCompat="@drawable/bill" />
 
         <TextView
             android:id="@+id/billtext2"
-            android:layout_width="342dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="64dp"
+            android:layout_width="351dp"
+            android:layout_height="117dp"
+            android:layout_marginTop="48dp"
             android:text="@string/billtext2"
             android:textAlignment="center"
             android:textColor="#073B80"
             android:textSize="24sp"
+            android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.637"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 

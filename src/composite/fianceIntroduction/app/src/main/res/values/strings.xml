@@ -10,20 +10,20 @@
     //expense
     <string name="expensetext">Know where your  money goes</string>
     <string name="expense_img">expenseimage</string>
-    <string name="expense_text2">Track your expenses easily, with categories</string>
+    <string name="expense_text2">Get an idea about your own expenses and be more financially organized</string>
     <string name="expense_btntext">Next</string>
     <string name="exp_img">expense_image</string>
 
     //goal
     <string name="goaltext">Set goals</string>
-    <string name="goaltext2">Focus on your plan and achieve your goals</string>
+    <string name="goaltext2">Set financial goals and take the first step to achieving your dreams</string>
     <string name="goalbtn">Next</string>
     <string name="goalbtn2">Back</string>
     <string name="goalimg">goalimage</string>
 
     //bill manager
     <string name="billtext">Manage bill payments</string>
-    <string name="billtext2">Track your bill payments easily</string>
+    <string name="billtext2">Add important future bill payments to the app, and never forget to miss bill payments again</string>
     <string name="billbtn">Start</string>
     <string name="billbtn2">Back</string>
     <string name="billimg">billimage</string>
