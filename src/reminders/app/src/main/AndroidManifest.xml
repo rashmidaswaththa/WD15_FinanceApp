@@ -12,11 +12,19 @@
             <activity
                 android:name=".addRemActivity"
                 android:exported="true"/>
+<<<<<<< HEAD
+            <activity
+                    android:name=".updateRemActivity"
+                    android:exported="true"/>
+                <activity
+                    android:name=".MainRemActivity"
+=======
                 <activity
                     android:name=".MainRemActivity"
                     android:exported="true"/>
             <activity
                     android:name=".updateRemActivity"
+>>>>>>> 04e8260 (Add all files again)
                     android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

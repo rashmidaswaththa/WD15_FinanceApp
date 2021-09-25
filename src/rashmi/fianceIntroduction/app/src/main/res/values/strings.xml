@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">fianceIntroduction</string>
+     //income
+    <string name="incometext">Gain Total Control Of Your Money</string>
+    <string name="incometext2">Become your own money manager and Improve your personal finances</string>
+    <string name="incomebtn">Next</string>
+    <string name="incomeimg">incomeimage</string>
+
+    //expense
+    <string name="expensetext">Know where your  money goes</string>
+    <string name="expense_img">expenseimage</string>
+    <string name="expense_text2">Track your expenses easily, with categories and financial report </string>
+    <string name="expense_btntext">Next</string>
+    <string name="exp_img">expense_image</string>
+</resources>

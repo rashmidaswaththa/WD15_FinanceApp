@@ -9,7 +9,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+<<<<<<< HEAD
         android:background="@color/design_default_color_secondary"
+=======
+        android:background="@color/teal_200"
+>>>>>>> 04e8260 (Add all files again)
         android:padding="16dp">
 
         <ImageView
@@ -30,9 +34,15 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="86dp"
             android:layout_toEndOf="@id/left_arrow"
+<<<<<<< HEAD
             android:fontFamily="sans-serif-medium"
             android:text="Manage Bill Manager"
             android:textColor="@color/design_default_color_surface"
+=======
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/toolbar_title"
+            android:textColor="@color/white"
+>>>>>>> 04e8260 (Add all files again)
             android:textSize="25sp" />
 
         <ImageView

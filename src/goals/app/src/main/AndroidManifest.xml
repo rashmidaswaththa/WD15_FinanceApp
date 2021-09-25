@@ -13,9 +13,12 @@
             android:name=".addActivity"
             android:exported="true" />
         <activity
+<<<<<<< HEAD
             android:name=".updateGoal"
             android:exported="true" />
         <activity
+=======
+>>>>>>> 04e8260 (Add all files again)
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

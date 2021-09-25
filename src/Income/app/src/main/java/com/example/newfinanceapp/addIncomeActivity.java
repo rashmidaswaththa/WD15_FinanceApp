@@ -36,9 +36,15 @@ public class addIncomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+<<<<<<< HEAD
                 String note = note_input.getText().toString();
                 String amount = amount_input.getText().toString();
                 String category = category_input.getText().toString();
+=======
+                Boolean insert = myDB.addIncome (note_input.getText().toString().trim(),
+                        amount_input.getText().toString().trim(),
+                        category_input.getText().toString().trim());
+>>>>>>> 04e8260 (Add all files again)
 
                 //making a function for validation and pass all parameters
                 boolean  check= validateinfo(note,amount,category);
