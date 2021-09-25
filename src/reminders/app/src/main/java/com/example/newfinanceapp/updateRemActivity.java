@@ -23,6 +23,8 @@ public class updateRemActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_reminder);
 
@@ -45,12 +47,30 @@ public class updateRemActivity extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //And only then we call this
-                MyRemDatabaseHelper myDB = new MyRemDatabaseHelper(updateRemActivity.this);
-                type = type_input.getText().toString().trim();
-                amount = amount_input.getText().toString().trim();
-                date = date_input.getText().toString().trim();
-                myDB.updateData(id, type, amount, date);
+
+                String type = type_input.getText().toString();
+                String amount = amount_input.getText().toString();
+                String date = date_input.getText().toString();
+
+                //making a function for validation and pass all parameters
+                boolean  check= validateinfo(type,amount,date);
+
+                if (check == true) {
+
+                    //And only then we call this
+                    MyRemDatabaseHelper myDB = new MyRemDatabaseHelper(updateRemActivity.this);
+                    type = type_input.getText().toString().trim();
+                    amount = amount_input.getText().toString().trim();
+                    date = date_input.getText().toString().trim();
+                    myDB.updateData(id, type, amount, date);
+
+                    Toast.makeText(updateRemActivity.this, "Updated Successfully" , Toast.LENGTH_SHORT).show();
+                }
+
+                else {
+                    Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
         delete_button.setOnClickListener(new View.OnClickListener() {
@@ -111,4 +131,46 @@ public class updateRemActivity extends AppCompatActivity {
         });
         builder.create().show();
     }
+
+    //validation method
+    private boolean validateinfo(String type, String amount, String date) {
+
+        if (type.length() == 0) {
+            //Checking for null type inputs
+            type_input.requestFocus();
+            type_input.setError("THIS FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!type.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //Checking for relevant input types for the fields
+            type_input.requestFocus();
+            type_input.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+            return false;
+        } else if (amount.length() == 0) {
+            //Checking for null amount inputs
+            amount_input.requestFocus();
+            amount_input.setError("FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!amount.matches("\\d+")) {
+            //Checking for relevant input types for the fields
+            amount_input.requestFocus();
+            amount_input.setError("PLEASE ENTER NUMBERS");
+            return false;
+        } else if (date.length() == 0) {
+            //Checking for null amount inputs
+            date_input.requestFocus();
+            date_input.setError("FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!date.matches("^(0[1-9]|[12][0-9]|3[01])\\/(0[1-9]|1[0-2])\\/([12][0-9]{3})$")){
+            //Checking for relevant input types for the fields
+            date_input.requestFocus();
+            date_input.setError("PLEASE ENTER IN DD/MM/YYYY FORMAT");
+            return false;
+        }
+        else {
+            return true;
+        }
+
+
+    }
+
 }
