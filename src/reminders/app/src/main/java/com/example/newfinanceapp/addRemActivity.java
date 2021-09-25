@@ -46,6 +46,7 @@ public class addRemActivity extends AppCompatActivity {
 
                 if(check==true){
 
+                    //When data are in valid formats, input data to the database
                     Boolean insert = myDB.addReminder (Rtype_input.getText().toString().trim(),
                             Ramount_input.getText().toString().trim(),
                             Rdate_input.getText().toString().trim());
@@ -99,28 +100,34 @@ public class addRemActivity extends AppCompatActivity {
     private boolean validateinfo(String type, String amount, String date) {
 
         if (type.length() == 0) {
+            //Checking for null type inputs
             Rtype_input.requestFocus();
             Rtype_input.setError("THIS FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!type.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //Checking for relevant input types for the fields
             Rtype_input.requestFocus();
             Rtype_input.setError("ENTER ONLY ALPHABETICAL CHARACTER");
             return false;
         } else if (amount.length() == 0) {
+            //Checking for null amount inputs
             Ramount_input.requestFocus();
             Ramount_input.setError("FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!amount.matches("\\d+")) {
+            //Checking for relevant input types for the fields
             Ramount_input.requestFocus();
             Ramount_input.setError("PLEASE ENTER NUMBERS");
             return false;
         } else if (date.length() == 0) {
+            //Checking for null amount inputs
             Rdate_input.requestFocus();
             Rdate_input.setError("FIELD CAN NOT BE EMPTY");
             return false;
-        } else if (!date.matches("^(1[0-9]|0[1-9]|3[0-1]|2[1-9])/(0[1-9]|1[0-2])/[0-9]{4}$")){
+        } else if (!date.matches("^(0[1-9]|[12][0-9]|3[01])\\/(0[1-9]|1[0-2])\\/([12][0-9]{3})$")){
+            //Checking for relevant input types for the fields
             Rdate_input.requestFocus();
-            Rdate_input.setError("PLEASE ENTER A VALID DATE");
+            Rdate_input.setError("PLEASE ENTER IN DD/MM/YYYY FORMAT");
             return false;
         }
         else {

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewFinanceApp">
         <activity
+            android:name=".RemReportActivity"
+            android:exported="true" />
+        <activity
             android:name=".updateExpenseActivity"
             android:exported="true" />
         <activity
@@ -17,7 +20,7 @@
             android:exported="true" />
         <activity
             android:name=".MainIncomeActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".updateGoalActivity"
             android:exported="true" />
@@ -26,7 +29,7 @@
             android:exported="true" />
         <activity
             android:name=".MainGoalActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".updateRemActivity"
             android:exported="true" />
@@ -35,7 +38,7 @@
             android:exported="true" />
         <activity
             android:name=".MainRemActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".updateIncomeActivity"
             android:exported="true" />

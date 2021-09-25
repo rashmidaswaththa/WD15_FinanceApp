@@ -22,10 +22,10 @@
         <item>Other</item>
     </string-array>
 
-    <string name="this_month">This Month</string>
-    <string name="earn">You Earned</string>
+    <string name="this_month">Upcoming Bills</string>
+    <string name="earn">You have to pay</string>
     <!--sample values-->
-    <string name="earned_amount">$ 6000</string>
+    <string name="earned_amount">Rs 6000</string>
     <string name="biggest_income">your biggest Income is from</string>
     <!--sample values-->
     <string name="highest_salary">$ 5000</string>
@@ -80,7 +80,6 @@
     <string name="goalnameupdate">Goal Name</string>
     <string name="goalamountupdate">Amount</string>
     <string name="goaldescriptionupdate">Goal Description</string>
-
 
 
     <string name="title_displaylist_expense">All Expenses</string>
