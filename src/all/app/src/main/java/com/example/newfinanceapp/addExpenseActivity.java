@@ -71,11 +71,13 @@ public class addExpenseActivity extends AppCompatActivity {
                 String cat = category_text.getSelectedItem().toString().trim();
 
                 //byte[] image = onActivityResult(requestCode, resultCode, data).image;
-                boolean insert = DB.insertData(note, amount, pay, cat);
+                boolean insert = DB.insertData(note, amount, pay, cat); //insert entered data to the database
 
                 if (insert) {
+                    //display success message when data is inserted to the database successfully
                     Toast.makeText(addExpenseActivity.this, "Inserted Successfully", Toast.LENGTH_SHORT).show();
                 } else {
+                    //display error message when data is not inserted to the database
                     Toast.makeText(addExpenseActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
                 }
 

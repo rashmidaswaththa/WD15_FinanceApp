@@ -52,15 +52,18 @@ public class addGoalActivity extends AppCompatActivity {
                             goalDesInput.getText().toString().trim());
 
                     if(insert==true){
+                        //display success message when data is inserted to the database successfully
                         Toast.makeText(addGoalActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
                     }
                     else{
+                        //display error message when data is not inserted to the database
                         Toast.makeText(addGoalActivity.this, "Error!!" , Toast.LENGTH_SHORT).show();
                     }
-
+                    //display toast message when all entered data are valid
                     Toast.makeText(getApplicationContext(), "Data is valid",Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    //display toast message when invalid data is entered
                     Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
                 }
 
@@ -92,6 +95,7 @@ public class addGoalActivity extends AppCompatActivity {
         left_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //displat toast message when the left icon is clicked
                 Toast.makeText(addGoalActivity.this, "You clicked in left icon" , Toast.LENGTH_SHORT).show();
             }
         });
@@ -109,26 +113,32 @@ public class addGoalActivity extends AppCompatActivity {
     //validation
     private boolean validateinfo(String name, String amount, String description) {
         if (name.length() == 0) {
+            //checking if the goal name text feild is empty
             goalNameInput.requestFocus();
             goalNameInput.setError("THIS FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!name.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //getting only relevant input types
             goalNameInput.requestFocus();
             goalNameInput.setError("ENTER ONLY ALPHABETICAL CHARACTER");
             return false;
         } else if (amount.length() == 0) {
+            //checking if the goal amount text feild is empty
             goalAmountInput.requestFocus();
             goalAmountInput.setError("FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!amount.matches("\\d+")) {
+            //getting only relevant input types
             goalAmountInput.requestFocus();
             goalAmountInput.setError("PLEASE ENTER NUMBERS");
             return false;
         } else if (description.length() == 0) {
+            //checking if the goal description text feild is empty
             goalDesInput.requestFocus();
             goalDesInput.setError("FILED CAN NOT BE EMPTY");
             return false;
         } else if (!name.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //getting only relevant input types
             goalNameInput.requestFocus();
             goalNameInput.setError("ENTER ONLY ALPHABETICAL CHARACTER");
             return false;
