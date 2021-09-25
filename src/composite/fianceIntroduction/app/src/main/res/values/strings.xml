@@ -4,6 +4,7 @@
     <string name="incometext">Gain Total Control Of Your Money</string>
     <string name="incometext2">Become your own money manager and Improve your personal finances</string>
     <string name="incomebtn">Next</string>
+    <string name="incomebtn2">Back</string>
     <string name="incomeimg">incomeimage</string>
 
     //expense
@@ -17,11 +18,13 @@
     <string name="goaltext">Set goals</string>
     <string name="goaltext2">Focus on your plan and achieve your goals</string>
     <string name="goalbtn">Next</string>
+    <string name="goalbtn2">Back</string>
     <string name="goalimg">goalimage</string>
 
     //bill manager
     <string name="billtext">Manage bill payments</string>
     <string name="billtext2">Track your bill payments easily</string>
-    <string name="billbtn">Next</string>
+    <string name="billbtn">Start</string>
+    <string name="billbtn2">Back</string>
     <string name="billimg">billimage</string>
 </resources>

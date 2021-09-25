@@ -14,8 +14,8 @@
 
         <TextView
             android:id="@+id/bill_text"
-            android:layout_width="424dp"
-            android:layout_height="59dp"
+            android:layout_width="405dp"
+            android:layout_height="67dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
@@ -27,49 +27,62 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintHorizontal_bias="0.393"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.114" />
+            app:layout_constraintVertical_bias="0.128" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="394dp"
-            android:layout_height="301dp"
+            android:layout_width="409dp"
+            android:layout_height="312dp"
             android:contentDescription="@string/billimg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bill_text"
-            app:layout_constraintVertical_bias="0.122"
+            app:layout_constraintVertical_bias="0.193"
             app:srcCompat="@drawable/bill" />
 
         <TextView
             android:id="@+id/billtext2"
             android:layout_width="342dp"
             android:layout_height="69dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="64dp"
             android:text="@string/billtext2"
             android:textAlignment="center"
             android:textColor="#073B80"
-            android:textSize="20sp"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintHorizontal_bias="0.637"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <Button
-            android:id="@+id/billlbtn"
+            android:id="@+id/incomebtn"
             android:layout_width="@dimen/first_button_width"
             android:layout_height="@dimen/first_button_height"
-            android:layout_marginBottom="108dp"
+            android:layout_marginBottom="24dp"
             android:background="@drawable/button1"
-            android:text="@string/incomebtn"
+            android:text="@string/billbtn"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.864"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/billbtn2"
+            android:layout_width="@dimen/first_button_width"
+            android:layout_height="@dimen/first_button_height"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button1"
+            android:text="@string/billbtn2"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.131"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
