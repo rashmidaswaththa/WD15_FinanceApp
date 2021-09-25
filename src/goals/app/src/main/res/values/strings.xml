@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">newFinanceApp</string>
+    <string name="test">test</string>
+    <string name="back_arrow">back arrow</string>
+    <string name="toolbar_title">Manage Income</string>
+    <string name="save_button">check</string>
+    <string name="title_displaylist">All Goals</string>
+    <string name="addButton_text">ADD</string>
+    <string name="goalnametext">Goal Name</string>
+    <string name="goalamounttext">Goal Amount</string>
+    <string name="goaldestext">Goal Description</string>
+    <string name="goalname">Goal Name</string>
+    <string name="goalamount">Amount</string>
+    <string name="goaldescription">Goal Description</string>
+    <string name="goaladd">ADD</string>
+    <string name="goalnameupdate">Goal Name</string>
+    <string name="goalamountupdate">Amount</string>
+    <string name="goaldescriptionupdate">Goal Description</string>
+</resources>

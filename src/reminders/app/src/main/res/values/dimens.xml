@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="addField1_textwidth">300dp</dimen>
+    <dimen name="addField1_textheight">50dp</dimen>
+    <dimen name="addField2_textwidth">300dp</dimen>
+    <dimen name="addField2_textheight">50dp</dimen>
+</resources>
