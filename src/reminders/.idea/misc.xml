@@ -4,12 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.19315068493150686" />
+<<<<<<< HEAD
         <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/activity_add_rem.xml" value="0.25" />
         <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/activity_main_rem.xml" value="0.15" />
         <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/activity_update_income.xml" value="0.22" />
         <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/activity_update_reminder.xml" value="0.22" />
         <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/my_row.xml" value="0.33" />
         <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/toolbar_rem.xml" value="0.33" />
+=======
+        <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/activity_add_rem.xml" value="0.1486111111111111" />
+        <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/activity_update_income.xml" value="0.22" />
+        <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/activity_update_reminder.xml" value="0.1486111111111111" />
+        <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/my_row.xml" value="0.33" />
+        <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/reminders/app/src/main/res/layout/toolbar_rem.xml" value="0.10740740740740741" />
+>>>>>>> 04e8260 (Add all files again)
         <entry key="..\:/2nd year/2 nd semester/MAD/newFinanceApp/app/src/main/res/layout/activity_add.xml" value="0.22" />
         <entry key="..\:/2nd year/2 nd semester/MAD/newFinanceApp/app/src/main/res/layout/activity_main.xml" value="0.20092592592592592" />
         <entry key="..\:/2nd year/2 nd semester/MAD/newFinanceApp/app/src/main/res/layout/toolbar.xml" value="0.17899543378995433" />

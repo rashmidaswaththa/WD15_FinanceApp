@@ -4,7 +4,11 @@ public class Reminder {
     public int id;
     public String type, amount, date;
 
+<<<<<<< HEAD
     public Reminder(int id, String type, String amount, String date){
+=======
+    public Income(int id, String type, String amount, String date){
+>>>>>>> 04e8260 (Add all files again)
         this.id = id;
         this.type = type;
         this.amount = amount;

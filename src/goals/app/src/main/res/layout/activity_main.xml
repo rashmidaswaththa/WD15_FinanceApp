@@ -8,9 +8,13 @@
 
     <include
         android:id="@+id/include"
+<<<<<<< HEAD
         layout="@layout/toolbar"
         tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="130dp" />
+=======
+        layout="@layout/toolbar" />
+>>>>>>> 04e8260 (Add all files again)
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
@@ -27,8 +31,13 @@
         android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginEnd="176dp"
         android:layout_marginBottom="44dp"
+=======
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="36dp"
+>>>>>>> 04e8260 (Add all files again)
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

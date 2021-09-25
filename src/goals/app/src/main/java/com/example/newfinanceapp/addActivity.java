@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+<<<<<<< HEAD
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +16,15 @@ import android.content.Intent;
 public class addActivity extends AppCompatActivity {
 
     //Initialize Variables
+=======
+import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class addActivity extends AppCompatActivity {
+
+>>>>>>> 04e8260 (Add all files again)
     EditText goalNameInput, goalAmountInput, goalDesInput;
     Button add_button;
     ImageButton back_button;
@@ -23,11 +33,15 @@ public class addActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
+<<<<<<< HEAD
         //Assign Variables
+=======
+>>>>>>> 04e8260 (Add all files again)
         goalNameInput = findViewById(R.id.addField1_text);
         goalAmountInput = findViewById(R.id.addField2_text);
         goalDesInput = findViewById(R.id.addFeild_text3);
         add_button = findViewById(R.id.add_button);
+<<<<<<< HEAD
         back_button = findViewById((R.id.back_button));
 
         add_button.setOnClickListener(new View.OnClickListener(){
@@ -67,6 +81,26 @@ public class addActivity extends AppCompatActivity {
 
             }
 
+=======
+
+        MyDatabaseHelper myDB = new MyDatabaseHelper(addActivity.this);
+        add_button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                Boolean insert = myDB.addGoal (goalNameInput.getText().toString().trim(),
+                        goalAmountInput.getText().toString().trim(),
+                        goalDesInput.getText().toString().trim());
+
+                if(insert==true){
+                    Toast.makeText(addActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(addActivity.this, "Error!!" , Toast.LENGTH_SHORT).show();
+                }
+            }
+>>>>>>> 04e8260 (Add all files again)
         });
 
          back_button.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +111,7 @@ public class addActivity extends AppCompatActivity {
             }
          });
 
+<<<<<<< HEAD
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,6 +120,8 @@ public class addActivity extends AppCompatActivity {
             }
         });
 
+=======
+>>>>>>> 04e8260 (Add all files again)
         ImageView left_arrow = findViewById(R.id.left_arrow);
         ImageView check = findViewById(R.id.check);
         TextView title = findViewById(R.id.title);
@@ -105,6 +142,7 @@ public class addActivity extends AppCompatActivity {
 
         title.setText("Manage Goals");
     }
+<<<<<<< HEAD
 
     //validation
     private boolean validateinfo(String name, String amount, String description) {
@@ -137,4 +175,6 @@ public class addActivity extends AppCompatActivity {
             return true;
         }
     }
+=======
+>>>>>>> 04e8260 (Add all files again)
 }

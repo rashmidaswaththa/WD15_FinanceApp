@@ -4,7 +4,11 @@ public class Goal {
     public int id;
     public String name, amount, description;
 
+<<<<<<< HEAD
     public Goal(int id, String name, String amount, String description){
+=======
+    public Income(int id, String name, String amount, String description){
+>>>>>>> 04e8260 (Add all files again)
         this.id = id;
         this.name = name;
         this.amount = amount;

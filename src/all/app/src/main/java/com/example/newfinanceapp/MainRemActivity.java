@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 public class MainRemActivity extends AppCompatActivity {
 
+    //Initialize variables
     RecyclerView recyclerView;
     FloatingActionButton add;
     CustomRemAdapter customAdapter;
@@ -32,16 +33,19 @@ public class MainRemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_rem);
 
+        //Assign variables
         recyclerView = findViewById(R.id.recycleView);
         add = findViewById(R.id.add_button);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Creating Intents
                 Intent intent = new Intent (MainRemActivity.this, addRemActivity.class);
                 startActivity(intent);
             }
         });
 
+        //Initialize variables
         ImageView left_arrow = findViewById(R.id.left_arrow);
         ImageView check = findViewById(R.id.check);
         ImageView clear = findViewById(R.id.clear);
@@ -50,6 +54,7 @@ public class MainRemActivity extends AppCompatActivity {
         left_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Display a toast message when you select back arrow
                 Toast.makeText(MainRemActivity.this, "You clicked in left icon" , Toast.LENGTH_SHORT).show();
             }
         });
@@ -57,6 +62,7 @@ public class MainRemActivity extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Display a toast message when data inserted to the database
                 Toast.makeText(MainRemActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
             }
         });
@@ -64,13 +70,14 @@ public class MainRemActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Display a toast message when data deleted
                 Toast.makeText(MainRemActivity.this, "Deleted Successfully" , Toast.LENGTH_SHORT).show();
             }
         });
 
-        title.setText("Manage Income");
+        title.setText("Manage Reminder");
 
-       myDB = new MyDatabaseHelper(MainRemActivity.this);
+        myDB = new MyDatabaseHelper(MainRemActivity.this);
         rem_id = new ArrayList<>();
         rem_type = new ArrayList<>();
         rem_amount = new ArrayList<>();

@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 public class MainIncomeActivity extends AppCompatActivity {
 
+    //Initialize variables
     RecyclerView recyclerView;
     FloatingActionButton add;
 
@@ -37,6 +38,7 @@ public class MainIncomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_income);
 
+        //Assign variables
         empty_imageview = findViewById(R.id.empty_imageview);
         no_data = findViewById(R.id.no_data);
         recyclerView = findViewById(R.id.recycleView);
@@ -44,11 +46,13 @@ public class MainIncomeActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Creating intent
                 Intent intent = new Intent (MainIncomeActivity.this, addIncomeActivity.class);
                 startActivity(intent);
             }
         });
 
+        //Initialize variables
         ImageView left_arrow = findViewById(R.id.left_arrow);
         ImageView check = findViewById(R.id.check);
         ImageView clear = findViewById(R.id.clear);
@@ -57,6 +61,7 @@ public class MainIncomeActivity extends AppCompatActivity {
         left_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Display a toast message when you click the back barrow
                 Toast.makeText(MainIncomeActivity.this, "You clicked in left icon" , Toast.LENGTH_SHORT).show();
             }
         });
@@ -64,6 +69,7 @@ public class MainIncomeActivity extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Display a toast message when data inserted
                 Toast.makeText(MainIncomeActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
             }
         });
@@ -71,6 +77,7 @@ public class MainIncomeActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Display a toast message when data deleted
                 Toast.makeText(MainIncomeActivity.this, "Deleted Successfully" , Toast.LENGTH_SHORT).show();
             }
         });

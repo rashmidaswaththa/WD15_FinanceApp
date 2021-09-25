@@ -1,5 +1,6 @@
 package com.example.newfinanceapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,21 +17,21 @@ import android.widget.Toast;
 public class updateGoalActivity extends AppCompatActivity {
 
     //declare variables
-    EditText goal_input, amount_input, desc_input;
+  
+    EditText name_input, amount_input, description_input;
     Button update_button;
     ImageButton back_button2 , delete_button;
 
-    String id, goal, amount, description;
+    String id, name, amount, description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_goal);
 
-        //Assign Variables
-        goal_input = findViewById(R.id.updateField1_text);
+        name_input = findViewById(R.id.updateField1_text);
         amount_input = findViewById(R.id.updateField2_text);
-        desc_input = findViewById(R.id.updateField3_text);
+        description_input = findViewById(R.id.updateField3_text);
         update_button = findViewById(R.id.update_button);
         back_button2 = findViewById(R.id.back_button2);
         delete_button = findViewById(R.id.delete_button);
@@ -47,28 +48,12 @@ public class updateGoalActivity extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String name = name_input.getText().toString();
-                String amount = amount_input.getText().toString();
-                String description = description_input.getText().toString();
-
-                //making a function for validation and pass all parameters
-                boolean  check= validateinfo(name,amount,description);
-
-            if (check == true) {
                 //And only then we call this
                 MyDatabaseHelper myDB = new MyDatabaseHelper(updateGoalActivity.this);
-                goal = goal_input.getText().toString().trim();
+                name = name_input.getText().toString().trim();
                 amount = amount_input.getText().toString().trim();
-                description = desc_input.getText().toString().trim();
-                myDB.updateDataGoal(id, goal, amount, description);
-
-                Toast.makeText(getApplicationContext(),"Updated Succesfully",Toast.LENGTH_SHORT).show();
-
-            } else {
-                Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
-            }
-
+                description = description_input.getText().toString().trim();
+                myDB.updateDataGoal(id, name, amount, description);
             }
         });
         delete_button.setOnClickListener(new View.OnClickListener() {
@@ -89,19 +74,19 @@ public class updateGoalActivity extends AppCompatActivity {
     }
 
     void getAndSetIntentData(){
-        if(getIntent().hasExtra("id") && getIntent().hasExtra("goal") &&
+        if(getIntent().hasExtra("id") && getIntent().hasExtra("name") &&
                 getIntent().hasExtra("amount") && getIntent().hasExtra("description")){
             //Getting Data from Intent
             id = getIntent().getStringExtra("id");
-            goal = getIntent().getStringExtra("goal");
+            name = getIntent().getStringExtra("name");
             amount = getIntent().getStringExtra("amount");
             description = getIntent().getStringExtra("description");
 
             //Setting Intent Data
-            goal_input.setText(goal);
+            name_input.setText(name);
             amount_input.setText(amount);
-            desc_input.setText(description);
-            Log.d("stev", goal+" "+amount+" "+description);
+            description_input.setText(description);
+            Log.d("stev", name+" "+amount+" "+description);
         }else{
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }
@@ -109,10 +94,10 @@ public class updateGoalActivity extends AppCompatActivity {
 
 
 
-   void confirmDialog(){
+    void confirmDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Delete " + goal + " ?");
-        builder.setMessage("Are you sure you want to delete " + goal + " ?");
+        builder.setTitle("Delete " + name + " ?");
+        builder.setMessage("Are you sure you want to delete " + name + " ?");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -129,42 +114,6 @@ public class updateGoalActivity extends AppCompatActivity {
         });
         builder.create().show();
     }
-
-      //validation
-      private boolean validateinfo(String name, String amount, String description) {
-        if (name.length() == 0) {
-            //checking for null goal name inputs
-            name_input.requestFocus();
-            name_input.setError("THIS FIELD CAN NOT BE EMPTY");
-            return false;
-        } else if (!name.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
-            //checking for relevant input types for the field
-            name_input.requestFocus();
-            name_input.setError("ENTER ONLY ALPHABETICAL CHARACTERS");
-            return false;
-        } else if (amount.length() == 0) {
-            //checking for null amount inputs
-            amount_input.requestFocus();
-            amount_input.setError("FIELD CAN NOT BE EMPTY");
-            return false;
-        } else if (!amount.matches("\\d+")) {
-            //checking for relevant input types for the field
-            amount_input.requestFocus();
-            amount_input.setError("PLEASE ENTER NUMBERS");
-            return false;
-        } else if (description.length() == 0) {
-            //checking for null description inputs
-            description_input.requestFocus();
-            description_input.setError("FILED CAN NOT BE EMPTY");
-            return false;
-        } else if (!name.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
-            //checking for relevant input types for the field
-            description_input.requestFocus();
-            description_input.setError("ENTER ONLY ALPHABETICAL CHARACTERS");
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
 }
+
+

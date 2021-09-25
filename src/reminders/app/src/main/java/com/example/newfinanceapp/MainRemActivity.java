@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,9 +23,12 @@ public class MainRemActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     FloatingActionButton add;
-    CustomAdapter customAdapter;
+    CustomRemAdapter customAdapter;
 
-    MyRemDatabaseHelper myDB;
+    ImageView empty_imageview;
+    TextView no_data;
+
+    MyDatabaseHelper myDB;
     ArrayList<String> rem_id, rem_type, rem_amount, rem_date;
 
 
@@ -31,6 +36,9 @@ public class MainRemActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_rem);
+
+        empty_imageview = findViewById(R.id.empty_imageview);
+        no_data = findViewById(R.id.no_data);
 
         recyclerView = findViewById(R.id.recycleView);
         add = findViewById(R.id.add_button);
@@ -70,7 +78,7 @@ public class MainRemActivity extends AppCompatActivity {
 
         title.setText("Manage Income");
 
-       myDB = new MyRemDatabaseHelper(MainRemActivity.this);
+       myDB = new MyDatabaseHelper(MainRemActivity.this);
         rem_id = new ArrayList<>();
         rem_type = new ArrayList<>();
         rem_amount = new ArrayList<>();
@@ -78,7 +86,7 @@ public class MainRemActivity extends AppCompatActivity {
 
      storeDataInArrays();
 
-        customAdapter = new CustomAdapter(MainRemActivity.this,this,rem_id, rem_type, rem_amount, rem_date);
+        customAdapter = new CustomRemAdapter(MainRemActivity.this,this,rem_id, rem_type, rem_amount, rem_date);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainRemActivity.this));
 
@@ -93,9 +101,10 @@ public class MainRemActivity extends AppCompatActivity {
     }
 
     void storeDataInArrays(){
-       Cursor cursor = myDB.readAllData();
+       Cursor cursor = myDB.readAllDataRem();
        if(cursor.getCount() == 0){
-            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+           empty_imageview.setVisibility(View.VISIBLE);
+           no_data.setVisibility(View.VISIBLE);
         }else{
            while (cursor.moveToNext()){
                rem_id.add(cursor.getString(0));
@@ -103,7 +112,16 @@ public class MainRemActivity extends AppCompatActivity {
                rem_amount.add(cursor.getString(2));
                rem_date.add(cursor.getString(3));
             }
+           empty_imageview.setVisibility(View.GONE);
+           no_data.setVisibility(View.GONE);
        }
    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
 }

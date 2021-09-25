@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">newFinanceApp</string>
+    <string name="test">test</string>
+    <string name="back_arrow">back arrow</string>
+    <string name="toolbar_title">Manage Income</string>
+    <string name="save_button">check</string>
+    <string name="income_note">Note</string>
+    <string name="addIncome_field2">Amount</string>
+    <string name="addIncome_field3">Category</string>
+    <string name="addButton_text">ADD</string>
+    <string name="title_displaylist_income">All Income</string>
+    <string name="all_income">all income</string>
+    <string name="update_note">Note</string>
+    <string name="update_amount">Amount</string>
+    <string name="update_button">UPDATE</string>
+    <string name="update_category">Category</string>
+    <string name="updatebutton">Update</string>
+    <string-array name="income_category">
+        <item>Salary</item>
+        <item>Savings</item>
+        <item>Investments</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="this_month">Upcoming Bills</string>
+    <string name="earn">You have to pay</string>
+    <!--sample values-->
+    <string name="earned_amount">Rs 6000</string>
+    <string name="biggest_income">your biggest Income is from</string>
+    <!--sample values-->
+    <string name="highest_salary">$ 5000</string>
+    <string name="white_box_frame">curved_whitebox_frame</string>
+    <string name="salaray_box">outined_salaray_box</string>
+    <string name="horizontal_scroll">horiizontal_scroll</string>
+    <string name="money_bag">imoney_bag</string>
+    <string name="income_top">Income</string>
+    <string name="month_drop">Month</string>
+    <string name="Salary">Salary</string>
+    <string name="salary_sub_detail">Salary for July</string>
+    <string name="salary_amount">+ $5000</string>
+    <string name="salary_time">04:30 PM</string>
+    <string name="passive_income">Passive Income</string>
+    <string name="pas_Income_detail">UI8 sales</string>
+    <string name="pas_income_amount">+ $1000</string>
+    <string name="pa_income_time">08:30 PM</string>
+    <string name="popup_frame">popup frame</string>
+    <string name="popup_text">Remove this transaction ?</string>
+    <string name="alert_message">Are you sure do you wanna remove this transaction?</string>
+    <string name="add_form_amount">Amount</string>
+    <string name="add_income_top">Income</string>
+    <string name="type_amount">$200 </string>
+    <string name="add_field1_label">Income category</string>
+    <string name="add_field2_label">Note</string>
+    <string name="add_field_label3">Account</string>
+    <string name="add_field_text1" />
+    <string name="add_field_text2" />
+    <string name="add_field_text3" />
+    <string name="add_form_toggle_text" />
+    <string name="add_form_field4">Repeat transaction</string>
+
+    <string name="title_displaylist">All Bill Reminders</string>
+    <string name="Rtype">Type</string>
+    <string name="Ramount">Amount</string>
+    <string name="Rdate">Due date</string>
+    <string name="Addbtn">Add</string>
+    <string name="rem_type">Type</string>
+    <string name="addReminder_field2">amount</string>
+    <string name="addReminder_field3">Due date</string>
+    <string name="updatebtn">Update</string>
+
+
+    <string name="title_displaylist_Goal">All Goals</string>
+    <string name="goalnametext">Goal Name</string>
+    <string name="goalamounttext">Goal Amount</string>
+    <string name="goaldestext">Goal Description</string>
+    <string name="goalname">Goal Name</string>
+    <string name="goalamount">Amount</string>
+    <string name="goaldescription">Goal Description</string>
+    <string name="goaladd">ADD</string>
+    <string name="goalnameupdate">Goal Name</string>
+    <string name="goalamountupdate">Amount</string>
+    <string name="goaldescriptionupdate">Goal Description</string>
+
+
+    <string name="title_displaylist_expense">All Expenses</string>
+    <string name="expense_note">Note</string>
+    <string name="addExpense_field2">Amount</string>
+    <string name="addExpense_field3">Payment Method</string>
+    <string name="addExpense_textfield4">Category</string>
+    <string name="uplaod_pic">Attachments</string>
+    <string name="addExpense_imageinsert">attachment</string>
+    <string name="addExpense_uploadimage">Upload image</string>
+    <string name="toolbar_displaylist_verticon">vertiv=cal_navigation</string>
+    <string name="currency">Rs .</string>
+
+    <string-array name="Payment_method">
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Check</item>
+        <item>Debit</item>
+    </string-array>
+
+    <string-array name="expense_category">
+        <item>Health</item>
+        <item>Food</item>
+        <item>Education</item>
+        <item>Family</item>
+        <item>Clothes</item>
+        <item>Loans</item>
+        <item>Home Office</item>
+        <item>Other</item>
+    </string-array>
+
+    //income
+    <string name="incometext">Gain Total Control Of Your Money</string>
+    <string name="incometext2">Become your own money manager and Improve your personal finances</string>
+    <string name="incomebtn">Next</string>
+    <string name="incomebtn2">Back</string>
+    <string name="incomeimg">incomeimage</string>
+
+    //expense
+    <string name="expensetext">Know where your  money goes</string>
+    <string name="expense_img">expenseimage</string>
+    <string name="expense_text2">Get an idea about your own expenses and be more financially organized</string>
+    <string name="expense_btntext">Next</string>
+    <string name="exp_img">expense_image</string>
+
+    //goal
+    <string name="goaltext">Set goals</string>
+    <string name="goaltext2">Set financial goals and take the first step to achieving your dreams</string>
+    <string name="goalbtn">Next</string>
+    <string name="goalbtn2">Back</string>
+    <string name="goalimg">goalimage</string>
+
+    //bill manager
+    <string name="billtext">Manage bill payments</string>
+    <string name="billtext2">Add important future bill payments to the app, and never forget to miss bill payments again</string>
+    <string name="billbtn">Start</string>
+    <string name="billbtn2">Back</string>
+    <string name="billimg">billimage</string>
+
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
+
+</resources>

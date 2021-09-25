@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_rem_report.xml" value="0.33" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_add_income.xml" value="0.17346014492753623" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_add_rem.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_main.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_main_income.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/expense_row_record.xml" value="0.152" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_goal.xml" value="0.2" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_income.xml" value="0.536" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_rem.xml" value="0.2" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.24027777777777778" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_add_goal.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_main.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_main_goal.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_main_income.xml" value="0.14166666666666666" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_main_rem.xml" value="0.14166666666666666" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_second.xml" value="0.14166666666666666" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/app_main.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/dashboard_header.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/dashboard_main.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/intro_bill.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/intro_expense.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/intro_goal.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/intro_income.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/my_row_goal.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/piechart_main.xml" value="0.14166666666666666" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/menu/dashboard_main_menu.xml" value="0.14166666666666666" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_add.xml" value="0.19583333333333333" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2703125" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2703125" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_baseline_arrow_circle_right_24.xml" value="0.24027777777777778" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.15601851851851853" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.24027777777777778" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_outline_check_24.xml" value="0.2703125" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_outline_clear_24.xml" value="0.2703125" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_outline_close_24.xml" value="0.15601851851851853" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/search.xml" value="0.24027777777777778" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/text_back_frame.xml" value="0.24027777777777778" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/font/.xml" value="0.284375" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/font/roboto.xml" value="0.234375" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_add.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_add_income.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_intro.xml" value="0.16620370370370371" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_main2.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_main3.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_main4.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_main_income.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_second.xml" value="0.25416666666666665" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_update.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/activity_update_income.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/my_row.xml" value="0.2" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/search.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/toolbar.xml" value="0.2" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/toolbar_for_displaylist.xml" value="0.1814814814814815" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/layout/toolbar_income.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/menu/my_menu.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/newFinanceApp/app/src/main/res/menu/search_menu.xml" value="0.22592592592592592" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/activity_add_income.xml" value="0.21331521739130435" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/activity_main.xml" value="0.213768115942029" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/activity_main_income.xml" value="0.22327898550724637" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/activity_main_login.xml" value="0.14166666666666666" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/activity_main_rem.xml" value="0.21331521739130435" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/activity_second.xml" value="0.213768115942029" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/activity_update_goal.xml" value="0.213768115942029" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/activity_update_income.xml" value="0.213768115942029" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/my_row_goal.xml" value="0.16296296296296298" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/my_row_rem.xml" value="0.21331521739130435" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/toolbar_for_displaylist_rem.xml" value="0.21331521739130435" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/layout/toolbar_rem.xml" value="0.21331521739130435" />
+        <entry key="..\:/newFinanceApp/app/src/main/res/menu/menu_main.xml" value="0.22592592592592592" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

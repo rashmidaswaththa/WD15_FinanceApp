@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,9 +19,9 @@ public class addExpenseActivity extends AppCompatActivity {
     //insert form
     private EditText note_text;
     private EditText amount_text;
-    private EditText method_text;
-    private EditText category_text;
     private Button add_button;
+
+    Spinner method_text, category_text;
 
 
     MyDatabaseHelper DB;
@@ -42,8 +43,8 @@ public class addExpenseActivity extends AppCompatActivity {
 
         note_text = findViewById(R.id.addField1_text);
         amount_text = findViewById(R.id.addField2_text);
-        method_text = findViewById(R.id.editText_cash);
-        category_text = findViewById(R.id.editText_category);
+        method_text = findViewById(R.id.category_list1);
+        category_text = findViewById(R.id.category_list2);
         add_button = findViewById(R.id.add_btn);
 
 
@@ -66,8 +67,8 @@ public class addExpenseActivity extends AppCompatActivity {
 
                 String note = note_text.getText().toString().trim();
                 String amount = amount_text.getText().toString().trim();
-                String pay = method_text.getText().toString().trim();
-                String cat = category_text.getText().toString().trim();
+                String pay = method_text.getSelectedItem().toString().trim();
+                String cat = category_text.getSelectedItem().toString().trim();
 
                 //byte[] image = onActivityResult(requestCode, resultCode, data).image;
                 boolean insert = DB.insertData(note, amount, pay, cat); //insert entered data to the database
