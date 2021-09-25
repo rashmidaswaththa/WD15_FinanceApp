@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">newFinanceApp</string>
+    <string name="test">test</string>
+    <string name="back_arrow">back arrow</string>
+    <string name="toolbar_title">Manage Income</string>
+    <string name="save_button">check</string>
+    <string name="income_note">Note</string>
+    <string name="addIncome_field2">Amount</string>
+    <string name="addIncome_field3">Category</string>
+    <string name="addButton_text">ADD</string>
+    <string name="title_displaylist_income">All Income</string>
+    <string name="all_income">all income</string>
+    <string name="update_note">Note</string>
+    <string name="update_amount">Amount</string>
+    <string name="update_button">UPDATE</string>
+    <string name="update_category">Category</string>
+    <string name="updatebutton">Update</string>
+    <string-array name="income_category">
+        <item>Sallary</item>
+        <item>Savings</item>
+        <item>Transactions</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="this_month">This Month</string>
+    <string name="earn">You Earned</string>
+    <!--sample values-->
+    <string name="earned_amount">$ 6000</string>
+    <string name="biggest_income">your biggest Income is from</string>
+    <!--sample values-->
+    <string name="highest_salary">$ 5000</string>
+    <string name="white_box_frame">curved_whitebox_frame</string>
+    <string name="salaray_box">outined_salaray_box</string>
+    <string name="horizontal_scroll">horiizontal_scroll</string>
+    <string name="money_bag">imoney_bag</string>
+    <string name="income_top">Income</string>
+    <string name="month_drop">Month</string>
+    <string name="Salary">Salary</string>
+    <string name="salary_sub_detail">Salary for July</string>
+    <string name="salary_amount">+ $5000</string>
+    <string name="salary_time">04:30 PM</string>
+    <string name="passive_income">Passive Income</string>
+    <string name="pas_Income_detail">UI8 sales</string>
+    <string name="pas_income_amount">+ $1000</string>
+    <string name="pa_income_time">08:30 PM</string>
+    <string name="popup_frame">popup frame</string>
+    <string name="popup_text">Remove this transaction ?</string>
+    <string name="alert_message">Are you sure do you wanna remove this transaction?</string>
+    <string name="add_form_amount">Amount</string>
+    <string name="add_income_top">Income</string>
+    <string name="type_amount">$200 </string>
+    <string name="add_field1_label">Income category</string>
+    <string name="add_field2_label">Note</string>
+    <string name="add_field_label3">Account</string>
+    <string name="add_field_text1" />
+    <string name="add_field_text2" />
+    <string name="add_field_text3" />
+    <string name="add_form_toggle_text" />
+    <string name="add_form_field4">Repeat transaction</string>
+
+    <string name="title_displaylist">All Bill Reminders</string>
+    <string name="Rtype">Type</string>
+    <string name="Ramount">Amount</string>
+    <string name="Rdate">Due date</string>
+    <string name="Addbtn">Add</string>
+    <string name="rem_type">Type</string>
+    <string name="addReminder_field2">amount</string>
+    <string name="addReminder_field3">Due date</string>
+    <string name="updatebtn">Update</string>
+
+
+    <string name="title_displaylist_Goal">All Goals</string>
+    <string name="goalnametext">Goal Name</string>
+    <string name="goalamounttext">Goal Amount</string>
+    <string name="goaldestext">Goal Description</string>
+    <string name="goalname">Goal Name</string>
+    <string name="goalamount">Amount</string>
+    <string name="goaldescription">Goal Description</string>
+    <string name="goaladd">ADD</string>
+    <string name="goalnameupdate">Goal Name</string>
+    <string name="goalamountupdate">Amount</string>
+    <string name="goaldescriptionupdate">Goal Description</string>
+
+
+
+    <string name="title_displaylist_expense">All Expenses</string>
+    <string name="expense_note">Note</string>
+    <string name="addExpense_field2">Amount</string>
+    <string name="addExpense_field3">Payment Method</string>
+    <string name="addExpense_textfield4">Category</string>
+    <string name="uplaod_pic">Attachments</string>
+    <string name="addExpense_imageinsert">attachment</string>
+    <string name="addExpense_uploadimage">Upload image</string>
+    <string name="toolbar_displaylist_verticon">vertiv=cal_navigation</string>
+</resources>
