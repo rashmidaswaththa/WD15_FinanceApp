@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class intro_income extends AppCompatActivity {
+public class intro_bill extends AppCompatActivity {
 
     Button button1;
 
@@ -16,7 +16,7 @@ public class intro_income extends AppCompatActivity {
         setContentView(R.layout.intro_income);
 
         button1 = findViewById(R.id.goalbtn);
-        Intent intent = new Intent(intro_income.this, intro_expense.class);
+        Intent intent = new Intent(intro_bill.this, intro_expense.class);
         startActivity(intent);
     }
 }

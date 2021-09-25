@@ -12,4 +12,10 @@
     <string name="expense_text2">Track your expenses easily, with categories and financial report </string>
     <string name="expense_btntext">Next</string>
     <string name="exp_img">expense_image</string>
+
+    //goal
+    <string name="goaltext">Set goals</string>
+    <string name="goaltext2">Focus on your plan and achieve your goals</string>
+    <string name="incomebtn">Next</string>
+    <string name="incomeimg">incomeimage</string>
 </resources>
