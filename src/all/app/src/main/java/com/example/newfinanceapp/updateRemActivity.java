@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 public class updateRemActivity extends AppCompatActivity {
 
+    //Initialize variables
     EditText type_input, amount_input, date_input;
     Button update_button;
     ImageButton back_button2 , delete_button;
@@ -26,6 +27,7 @@ public class updateRemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_reminder);
 
+        //Assign variables
         type_input = findViewById(R.id.updateField1_text);
         amount_input = findViewById(R.id.updateField2_text);
         date_input = findViewById(R.id.updateDate3);
@@ -45,12 +47,33 @@ public class updateRemActivity extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //And only then we call this
-                MyDatabaseHelper myDB = new MyDatabaseHelper(updateRemActivity.this);
-                type = type_input.getText().toString().trim();
-                amount = amount_input.getText().toString().trim();
-                date = date_input.getText().toString().trim();
-                myDB.updateDataRem(id, type, amount, date);
+
+                String type = type_input.getText().toString();
+                String amount = amount_input.getText().toString();
+                String date = date_input.getText().toString();
+
+                //making a function for validation and pass all parameters
+                boolean  check= validateinfo(type,amount,date);
+
+                if (check == true) {
+
+                    //Creating database connection
+                    MyDatabaseHelper myDB = new MyDatabaseHelper(updateRemActivity.this);
+                    type = type_input.getText().toString().trim();
+                    amount = amount_input.getText().toString().trim();
+                    date = date_input.getText().toString().trim();
+                    myDB.updateDataRem(id, type, amount, date);
+
+                    Toast.makeText(getApplicationContext(),"Updated Succesfully",Toast.LENGTH_SHORT).show();
+
+                }
+                else {
+
+                    Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
+
+                }
+
+
             }
         });
         delete_button.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +86,7 @@ public class updateRemActivity extends AppCompatActivity {
         back_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Creating intents to back button
                 Intent intent = new Intent (updateRemActivity.this, MainRemActivity.class);
                 startActivity(intent);
             }
@@ -71,6 +95,7 @@ public class updateRemActivity extends AppCompatActivity {
     }
 
     void getAndSetIntentData(){
+
         if(getIntent().hasExtra("id") && getIntent().hasExtra("type") &&
                 getIntent().hasExtra("amount") && getIntent().hasExtra("date")){
             //Getting Data from Intent
@@ -85,6 +110,7 @@ public class updateRemActivity extends AppCompatActivity {
             date_input.setText(date);
             Log.d("stev", type+" "+amount+" "+date);
         }else{
+            //Display a toast message when data base is empty
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }
     }
@@ -92,6 +118,7 @@ public class updateRemActivity extends AppCompatActivity {
 
 
    void confirmDialog(){
+        //Confirmation message for delete
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete " + type+ " ?");
         builder.setMessage("Are you sure you want to delete " +type  + " ?");

@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 public class updateIncomeActivity extends AppCompatActivity {
 
+    //Assign variables
     EditText note_input, amount_input, category_input;
     Button update_button;
     ImageButton back_button2 , delete_button;
@@ -26,6 +27,7 @@ public class updateIncomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_income);
 
+        //Initialize variables
         note_input = findViewById(R.id.updateField1_text);
         amount_input = findViewById(R.id.updateField2_text);
         category_input = findViewById(R.id.updateField3_text);
@@ -47,7 +49,7 @@ public class updateIncomeActivity extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //And only then we call this
+                //Creating database connection
                 MyDatabaseHelper myDB = new MyDatabaseHelper(updateIncomeActivity.this);
                 note = note_input.getText().toString().trim();
                 amount = amount_input.getText().toString().trim();
@@ -65,6 +67,7 @@ public class updateIncomeActivity extends AppCompatActivity {
         back_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Creating intent for back button
                 Intent intent = new Intent (updateIncomeActivity.this, MainIncomeActivity.class);
                 startActivity(intent);
             }
@@ -94,6 +97,7 @@ public class updateIncomeActivity extends AppCompatActivity {
 
 
    void confirmDialog(){
+        //Confirmation message for delete
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete " + note + " ?");
         builder.setMessage("Are you sure you want to delete " + note + " ?");
