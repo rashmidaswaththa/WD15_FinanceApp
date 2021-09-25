@@ -14,7 +14,10 @@ import android.widget.Toast;
 
 public class addRemActivity extends AppCompatActivity {
 
+<<<<<<< HEAD
     //initialize variables
+=======
+>>>>>>> 04e8260 (Add all files again)
     EditText Rtype_input, Ramount_input,Rdate_input;
     Button add_button;
     ImageButton back_button;
@@ -24,7 +27,10 @@ public class addRemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_rem);
 
+<<<<<<< HEAD
         //Assign variables
+=======
+>>>>>>> 04e8260 (Add all files again)
         Rtype_input = findViewById(R.id.addReminder_text);
         Ramount_input = findViewById(R.id.addReminder2_text);
         Rdate_input = findViewById(R.id.ReminderTextDate);
@@ -37,6 +43,7 @@ public class addRemActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+<<<<<<< HEAD
                 String type = Rtype_input.getText().toString();
                 String amount = Ramount_input.getText().toString();
                 String date = Rdate_input.getText().toString();
@@ -63,6 +70,18 @@ public class addRemActivity extends AppCompatActivity {
 
                 else {
                     Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
+=======
+                Boolean insert = myDB.addReminder (Rtype_input.getText().toString().trim(),
+                        Ramount_input.getText().toString().trim(),
+                        Rdate_input.getText().toString().trim());
+
+
+                if(insert==true){
+                    Toast.makeText(addRemActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(addRemActivity.this, "Error!!" , Toast.LENGTH_SHORT).show();
+>>>>>>> 04e8260 (Add all files again)
                 }
             }
         });
@@ -95,6 +114,7 @@ public class addRemActivity extends AppCompatActivity {
 
         title.setText("Manage Reminder");
     }
+<<<<<<< HEAD
 
     //validation method
     private boolean validateinfo(String type, String amount, String date) {
@@ -136,4 +156,6 @@ public class addRemActivity extends AppCompatActivity {
 
 
     }
+=======
+>>>>>>> 04e8260 (Add all files again)
 }
