@@ -14,6 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
@@ -33,6 +34,16 @@
         android:layout_marginTop="140dp"
         android:layout_marginEnd="345dp"
         android:text="@string/goalname"
+=======
+    <TextView
+        android:id="@+id/addGoal_field1"
+        android:layout_width="196dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="345dp"
+        android:text="@string/goalnametext"
+>>>>>>> 04e8260 (Add all files again)
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,12 +66,21 @@
 
     <TextView
         android:id="@+id/addGoal_field2"
+<<<<<<< HEAD
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="350dp"
         android:text="@string/goalamount"
+=======
+        android:layout_width="292dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="350dp"
+        android:text="@string/goalamounttext"
+>>>>>>> 04e8260 (Add all files again)
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,12 +104,21 @@
 
     <TextView
         android:id="@+id/textView3"
+<<<<<<< HEAD
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="327dp"
         android:text="@string/goaldescription"
+=======
+        android:layout_width="307dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="327dp"
+        android:text="@string/goaldestext"
+>>>>>>> 04e8260 (Add all files again)
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +133,11 @@
         android:layout_height="53dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#74009688"
+<<<<<<< HEAD
         android:text="@string/goaladd"
+=======
+        android:text="ADD"
+>>>>>>> 04e8260 (Add all files again)
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,16 +146,28 @@
 
     <EditText
         android:id="@+id/addFeild_text3"
+<<<<<<< HEAD
         android:layout_width="300dp"
         android:layout_height="40dp"
+=======
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+>>>>>>> 04e8260 (Add all files again)
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/add_button"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.081" />
+=======
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.103" />
+>>>>>>> 04e8260 (Add all files again)
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

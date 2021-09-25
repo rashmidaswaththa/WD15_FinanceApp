@@ -1,8 +1,12 @@
 package com.example.newfinanceapp;
 
+<<<<<<< HEAD
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+=======
+import androidx.appcompat.app.AppCompatActivity;
+>>>>>>> 04e8260 (Add all files again)
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -23,8 +27,13 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton add;
 
     MyDatabaseHelper myDB;
+<<<<<<< HEAD
     ArrayList<String> goal_id, goal_name, goal_amount, goal_description;
     CustomAdapter customAdapter;
+=======
+    //ArrayList<String> income_id, income_note, income_amount, income_category;
+
+>>>>>>> 04e8260 (Add all files again)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
         title.setText("Manage Goals");
 
         myDB = new MyDatabaseHelper(MainActivity.this);
@@ -104,5 +114,31 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+=======
+        title.setText("Manage Income");
+
+//        myDB = new MyDatabaseHelper(MainActivity.this);
+//        income_id = new ArrayList<>();
+//        income_note = new ArrayList<>();
+//        income_amount = new ArrayList<>();
+//        income_category = new ArrayList<>();
+//
+//        storeDataInArrays();
+    }
+
+//    void storeDataInArrays(){
+//        Cursor cursor = myDB.readAllData();
+//        if(cursor.getCount() == 0){
+//            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+//        }else{
+//            while (cursor.moveToNext()){
+//                income_id.add(cursor.getString(0));
+//                income_note.add(cursor.getString(1));
+//                income_amount.add(cursor.getString(2));
+//                income_category.add(cursor.getString(3));
+//            }
+//        }
+//    }
+>>>>>>> 04e8260 (Add all files again)
 
 }

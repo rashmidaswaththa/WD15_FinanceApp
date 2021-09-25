@@ -9,6 +9,7 @@
     <string name="goalnametext">Goal Name</string>
     <string name="goalamounttext">Goal Amount</string>
     <string name="goaldestext">Goal Description</string>
+<<<<<<< HEAD
     <string name="goalname">Goal Name</string>
     <string name="goalamount">Amount</string>
     <string name="goaldescription">Goal Description</string>
@@ -16,4 +17,6 @@
     <string name="goalnameupdate">Goal Name</string>
     <string name="goalamountupdate">Amount</string>
     <string name="goaldescriptionupdate">Goal Description</string>
+=======
+>>>>>>> 04e8260 (Add all files again)
 </resources>

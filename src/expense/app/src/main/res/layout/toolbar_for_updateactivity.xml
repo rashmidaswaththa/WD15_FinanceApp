@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:app="http://schemas.android.com/apk/res-auto"
+=======
+>>>>>>> 04e8260 (Add all files again)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -13,6 +16,17 @@
         android:background="@color/teal_200"
         android:padding="16dp">
 
+<<<<<<< HEAD
+=======
+        <ImageView
+            android:id="@+id/left_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/back_arrow"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+>>>>>>> 04e8260 (Add all files again)
         <TextView
             android:id="@+id/title"
             android:layout_width="238dp"
@@ -22,7 +36,11 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="117dp"
+<<<<<<< HEAD
             android:layout_toEndOf="@id/left_arrow1"
+=======
+            android:layout_toEndOf="@id/left_arrow"
+>>>>>>> 04e8260 (Add all files again)
             android:fontFamily="sans-serif-condensed"
             android:text="@string/toolbar_title"
             android:textColor="@color/white"
@@ -37,6 +55,7 @@
             android:contentDescription="@string/save_button"
             android:src="@drawable/ic_outline_check_24" />
 
+<<<<<<< HEAD
         <ImageButton
             android:id="@+id/left_arrow1"
             android:layout_width="wrap_content"
@@ -47,13 +66,20 @@
             android:background="@color/teal_200"/>
 
         <ImageButton
+=======
+        <ImageView
+>>>>>>> 04e8260 (Add all files again)
             android:id="@+id/clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:contentDescription="@string/save_button"
+<<<<<<< HEAD
             app:srcCompat="@drawable/ic_baseline_delete_24"
             android:background="@color/teal_200"/>
+=======
+            android:src="@drawable/ic_baseline_delete_24"/>
+>>>>>>> 04e8260 (Add all files again)
     </RelativeLayout>
 
 </RelativeLayout>

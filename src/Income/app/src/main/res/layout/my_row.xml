@@ -8,7 +8,10 @@
     android:id="@+id/mainLayout">
 
     <androidx.cardview.widget.CardView
+<<<<<<< HEAD
         android:id="@+id/cardView"
+=======
+>>>>>>> 04e8260 (Add all files again)
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp">

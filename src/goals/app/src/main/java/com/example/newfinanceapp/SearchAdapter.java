@@ -18,9 +18,15 @@ class SearchViewHolder extends RecyclerView.ViewHolder{
 
     public SearchViewHolder(View itemView){
         super(itemView);
+<<<<<<< HEAD
         name = (TextView)itemView.findViewById(R.id.goal_name_txt);
         amount = (TextView)itemView.findViewById(R.id.goal_amount_txt);
         description = (TextView)itemView.findViewById(R.id.goal_desc_txt);
+=======
+        name = (TextView)itemView.findViewById(R.id.in_name_txt);
+        amount = (TextView)itemView.findViewById(R.id.in_amount_txt);
+        description = (TextView)itemView.findViewById(R.id.in_desc_txt);
+>>>>>>> 04e8260 (Add all files again)
     }
 
 }
@@ -45,7 +51,11 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> {
     public void onBindViewHolder( SearchViewHolder holder, int position) {
         holder.name.setText(goal.get(position).getName());
         holder.amount.setText(goal.get(position).getAmount());
+<<<<<<< HEAD
         holder.description.setText(goal.get(position).getDescription());
+=======
+        holder.description.setText(goal.get(position).getDesscription());
+>>>>>>> 04e8260 (Add all files again)
     }
 
     @Override
