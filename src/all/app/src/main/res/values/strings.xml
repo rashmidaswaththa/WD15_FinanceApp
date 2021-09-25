@@ -91,4 +91,5 @@
     <string name="addExpense_imageinsert">attachment</string>
     <string name="addExpense_uploadimage">Upload image</string>
     <string name="toolbar_displaylist_verticon">vertiv=cal_navigation</string>
+    <string name="currency">Rs .</string>
 </resources>
