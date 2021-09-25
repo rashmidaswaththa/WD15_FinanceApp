@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_rem_report.xml" value="0.33" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/expense_row_record.xml" value="0.8" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_goal.xml" value="0.2" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_income.xml" value="0.536" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_rem.xml" value="0.2" />
         <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_add.xml" value="0.19583333333333333" />
         <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2703125" />
         <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2703125" />
