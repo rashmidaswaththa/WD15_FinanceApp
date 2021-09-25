@@ -36,16 +36,15 @@
         <TextView
 
             android:id="@+id/expense_text2"
-            android:layout_width="359dp"
-            android:layout_height="69dp"
-            android:layout_marginBottom="84dp"
+            android:layout_width="353dp"
+            android:layout_height="103dp"
+            android:layout_marginBottom="92dp"
             android:text="@string/expense_text2"
             android:textAlignment="center"
             android:textColor="#073B80"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/expense_btn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.538"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
