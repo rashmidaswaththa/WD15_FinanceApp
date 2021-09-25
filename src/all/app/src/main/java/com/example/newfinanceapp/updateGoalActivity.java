@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 public class updateGoalActivity extends AppCompatActivity {
 
+    //declare variables
     EditText goal_input, amount_input, desc_input;
     Button update_button;
     ImageButton back_button2 , delete_button;
@@ -26,6 +27,7 @@ public class updateGoalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_goal);
 
+        //Assign Variables
         goal_input = findViewById(R.id.updateField1_text);
         amount_input = findViewById(R.id.updateField2_text);
         desc_input = findViewById(R.id.updateField3_text);
@@ -45,12 +47,28 @@ public class updateGoalActivity extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String name = name_input.getText().toString();
+                String amount = amount_input.getText().toString();
+                String description = description_input.getText().toString();
+
+                //making a function for validation and pass all parameters
+                boolean  check= validateinfo(name,amount,description);
+
+            if (check == true) {
                 //And only then we call this
                 MyDatabaseHelper myDB = new MyDatabaseHelper(updateGoalActivity.this);
                 goal = goal_input.getText().toString().trim();
                 amount = amount_input.getText().toString().trim();
                 description = desc_input.getText().toString().trim();
                 myDB.updateDataGoal(id, goal, amount, description);
+
+                Toast.makeText(getApplicationContext(),"Updated Succesfully",Toast.LENGTH_SHORT).show();
+
+            } else {
+                Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
+            }
+
             }
         });
         delete_button.setOnClickListener(new View.OnClickListener() {
@@ -110,5 +128,43 @@ public class updateGoalActivity extends AppCompatActivity {
             }
         });
         builder.create().show();
+    }
+
+      //validation
+      private boolean validateinfo(String name, String amount, String description) {
+        if (name.length() == 0) {
+            //checking for null goal name inputs
+            name_input.requestFocus();
+            name_input.setError("THIS FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!name.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //checking for relevant input types for the field
+            name_input.requestFocus();
+            name_input.setError("ENTER ONLY ALPHABETICAL CHARACTERS");
+            return false;
+        } else if (amount.length() == 0) {
+            //checking for null amount inputs
+            amount_input.requestFocus();
+            amount_input.setError("FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!amount.matches("\\d+")) {
+            //checking for relevant input types for the field
+            amount_input.requestFocus();
+            amount_input.setError("PLEASE ENTER NUMBERS");
+            return false;
+        } else if (description.length() == 0) {
+            //checking for null description inputs
+            description_input.requestFocus();
+            description_input.setError("FILED CAN NOT BE EMPTY");
+            return false;
+        } else if (!name.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //checking for relevant input types for the field
+            description_input.requestFocus();
+            description_input.setError("ENTER ONLY ALPHABETICAL CHARACTERS");
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }
