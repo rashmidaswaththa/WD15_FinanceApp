@@ -9,14 +9,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class addIncomeActivity extends AppCompatActivity {
 
-    //Initialize variables
-    EditText note_input, amount_input, category_input;
-    //Spinner category_input;
+
+ 
+    EditText note_input, amount_input;
+    Spinner category_input;
+
     Button add_button;
     ImageButton back_button;
 
@@ -28,7 +31,7 @@ public class addIncomeActivity extends AppCompatActivity {
         //Assign variables
         note_input = findViewById(R.id.addField1_text);
         amount_input = findViewById(R.id.addField2_text);
-        category_input = findViewById(R.id.updateField3_text);
+        category_input = findViewById(R.id.category_list2);
         add_button = findViewById(R.id.add_button);
         back_button = findViewById(R.id.back_button2);
 
@@ -41,7 +44,7 @@ public class addIncomeActivity extends AppCompatActivity {
                 //Inserting data to the database
                 Boolean insert = myDB.addIncome (note_input.getText().toString().trim(),
                         amount_input.getText().toString().trim(),
-                        category_input.getText().toString().trim());
+                        category_input.getSelectedItem().toString().trim());
 
                 if(insert==true){
                     //Display success message when data inserted Successfully to the data base

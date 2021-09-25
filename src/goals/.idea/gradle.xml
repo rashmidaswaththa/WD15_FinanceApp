@@ -5,7 +5,11 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="testRunner" value="PLATFORM" />
+<<<<<<< HEAD
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+=======
+        <option name="distributionType" value="LOCAL" />
+>>>>>>> 04e8260 (Add all files again)
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>

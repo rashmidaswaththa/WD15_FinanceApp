@@ -16,9 +16,9 @@
     <string name="update_category">Category</string>
     <string name="updatebutton">Update</string>
     <string-array name="income_category">
-        <item>Sallary</item>
+        <item>Salary</item>
         <item>Savings</item>
-        <item>Transactions</item>
+        <item>Investments</item>
         <item>Other</item>
     </string-array>
 
@@ -91,4 +91,24 @@
     <string name="addExpense_imageinsert">attachment</string>
     <string name="addExpense_uploadimage">Upload image</string>
     <string name="toolbar_displaylist_verticon">vertiv=cal_navigation</string>
+    <string name="currency">Rs .</string>
+
+    <string-array name="Payment_method">
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Check</item>
+        <item>Debit</item>
+    </string-array>
+
+    <string-array name="expense_category">
+        <item>Health</item>
+        <item>Food</item>
+        <item>Education</item>
+        <item>Family</item>
+        <item>Clothes</item>
+        <item>Loans</item>
+        <item>Home Office</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>

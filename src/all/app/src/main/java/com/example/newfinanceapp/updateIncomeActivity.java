@@ -44,6 +44,8 @@ public class updateIncomeActivity extends AppCompatActivity {
             ab.setTitle(title);
         }*/
 
+        category_input.setEnabled(false);
+
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

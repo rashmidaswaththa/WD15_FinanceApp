@@ -23,8 +23,11 @@ public class updateRemActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 04e8260 (Add all files again)
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_reminder);
 
@@ -47,6 +50,7 @@ public class updateRemActivity extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
 
                 String type = type_input.getText().toString();
                 String amount = amount_input.getText().toString();
@@ -71,6 +75,14 @@ public class updateRemActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
                 }
 
+=======
+                //And only then we call this
+                MyRemDatabaseHelper myDB = new MyRemDatabaseHelper(updateRemActivity.this);
+                type = type_input.getText().toString().trim();
+                amount = amount_input.getText().toString().trim();
+                date = date_input.getText().toString().trim();
+                myDB.updateData(id, type, amount, date);
+>>>>>>> 04e8260 (Add all files again)
             }
         });
         delete_button.setOnClickListener(new View.OnClickListener() {
@@ -131,6 +143,7 @@ public class updateRemActivity extends AppCompatActivity {
         });
         builder.create().show();
     }
+<<<<<<< HEAD
 
     //validation method
     private boolean validateinfo(String type, String amount, String date) {
@@ -173,4 +186,6 @@ public class updateRemActivity extends AppCompatActivity {
 
     }
 
+=======
+>>>>>>> 04e8260 (Add all files again)
 }

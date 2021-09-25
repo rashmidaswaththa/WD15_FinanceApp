@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="addField1_textwidth">300dp</dimen>
+    <dimen name="addField1_textheight">40dp</dimen>
+    <dimen name="addField2_textwidth">300dp</dimen>
+    <dimen name="addField2_textheight">40dp</dimen>
+
+    <dimen name="first_button_width">152dp</dimen>
+    <dimen name="first_button_height">48dp</dimen>
+
+
+    <dimen name="searchBarWidth">369dp</dimen>
+    <dimen name="searchBarHeight">51dp</dimen>
+
+    <dimen name="textBackgroundWidth">369dp</dimen>
+    <dimen name="textBackgroundHeight">85dp</dimen>
+
+
+
+</resources>
+
+

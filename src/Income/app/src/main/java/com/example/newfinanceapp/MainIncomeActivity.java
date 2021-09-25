@@ -30,8 +30,14 @@ public class MainIncomeActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     FloatingActionButton add;
 
+<<<<<<< HEAD
     ImageView empty_imageview;
     TextView no_data;
+=======
+    MyIncomeDatabaseHelper myDB;
+    ArrayList<String> income_id, income_note, income_amount, income_category;
+    CustomAdapter customAdapter;
+>>>>>>> 04e8260 (Add all files again)
 
     MyIncomeDatabaseHelper myDB;
     ArrayList<String> income_id, income_note, income_amount, income_category;
@@ -93,6 +99,7 @@ public class MainIncomeActivity extends AppCompatActivity {
         customAdapter = new CustomAdapter(MainIncomeActivity.this,this,income_id, income_note, income_amount, income_category);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainIncomeActivity.this));
+<<<<<<< HEAD
     }
 
     @Override
@@ -119,6 +126,37 @@ public class MainIncomeActivity extends AppCompatActivity {
             empty_imageview.setVisibility(View.GONE);
             no_data.setVisibility(View.GONE);
         }
+=======
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1){
+            recreate();
+        }
+    }
+
+   void storeDataInArrays(){
+       Cursor cursor = myDB.readAllData();
+        if(cursor.getCount() == 0){
+            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+        }else{
+            while (cursor.moveToNext()){
+                income_id.add(cursor.getString(0));
+                income_note.add(cursor.getString(1));
+                income_amount.add(cursor.getString(2));
+                income_category.add(cursor.getString(3));
+            }
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+>>>>>>> 04e8260 (Add all files again)
     }
 
     @Override

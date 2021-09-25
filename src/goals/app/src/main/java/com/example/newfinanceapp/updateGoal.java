@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 public class updateGoal extends AppCompatActivity {
 
     EditText name_input, amount_input, description_input;
@@ -187,17 +188,28 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class updateGoal extends AppCompatActivity {
+=======
+public class updateGoalActivity extends AppCompatActivity {
+>>>>>>> 04e8260 (Add all files again)
 
     EditText goal_input, amount_input, desc_input;
     Button update_button;
     ImageButton back_button2 , delete_button;
 
+<<<<<<< HEAD
     String id, goal, amount, description;
+=======
+    String id, goal, amount, desc;
+>>>>>>> 04e8260 (Add all files again)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
         setContentView(R.layout.activity_update_goal);
+=======
+        setContentView(R.layout.activity_update_income);
+>>>>>>> 04e8260 (Add all files again)
 
         goal_input = findViewById(R.id.updateField1_text);
         amount_input = findViewById(R.id.updateField2_text);
@@ -214,16 +226,28 @@ public class updateGoal extends AppCompatActivity {
         if (ab != null) {
             ab.setTitle(title);
         }*/
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> 04e8260 (Add all files again)
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //And only then we call this
+<<<<<<< HEAD
                 MyDatabaseHelper myDB = new MyDatabaseHelper(updateGoal.this);
                 goal = goal_input.getText().toString().trim();
                 amount = amount_input.getText().toString().trim();
                 description = desc_input.getText().toString().trim();
                 myDB.updateData(id, goal, amount, description);
+=======
+                MyDatabaseHelper myDB = new MyDatabaseHelper(updateGoalActivity.this);
+                goal = goal_input.getText().toString().trim();
+                amount = amount_input.getText().toString().trim();
+                desc = desc_input.getText().toString().trim();
+                myDB.updateData(id, goal, amount, desc);
+>>>>>>> 04e8260 (Add all files again)
             }
         });
         delete_button.setOnClickListener(new View.OnClickListener() {
@@ -236,7 +260,11 @@ public class updateGoal extends AppCompatActivity {
         back_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 Intent intent = new Intent (updateGoal.this, MainActivity.class);
+=======
+                Intent intent = new Intent (updateGoalActivity.this, MainActivity.class);
+>>>>>>> 04e8260 (Add all files again)
                 startActivity(intent);
             }
         });
@@ -245,6 +273,7 @@ public class updateGoal extends AppCompatActivity {
 
     void getAndSetIntentData(){
         if(getIntent().hasExtra("id") && getIntent().hasExtra("goal") &&
+<<<<<<< HEAD
                 getIntent().hasExtra("amount") && getIntent().hasExtra("description")){
             //Getting Data from Intent
             id = getIntent().getStringExtra("id");
@@ -257,6 +286,20 @@ public class updateGoal extends AppCompatActivity {
             amount_input.setText(amount);
             desc_input.setText(description);
             Log.d("stev", goal+" "+amount+" "+description);
+=======
+                getIntent().hasExtra("amount") && getIntent().hasExtra("desc")){
+            //Getting Data from Intent
+            id = getIntent().getStringExtra("id");
+            note = getIntent().getStringExtra("goal");
+            amount = getIntent().getStringExtra("amount");
+            category = getIntent().getStringExtra("desc");
+
+            //Setting Intent Data
+            note_input.setText(goal);
+            amount_input.setText(amount);
+            category_input.setText(desc);
+            Log.d("stev", goal+" "+amount+" "+desc);
+>>>>>>> 04e8260 (Add all files again)
         }else{
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }
@@ -271,7 +314,11 @@ public class updateGoal extends AppCompatActivity {
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+<<<<<<< HEAD
                 MyDatabaseHelper myDB = new MyDatabaseHelper(updateGoal.this);
+=======
+                MyDatabaseHelper myDB = new MyDatabaseHelper(updateGoalActivity.this);
+>>>>>>> 04e8260 (Add all files again)
                 myDB.deleteOneRow(id);
                 finish();
             }
@@ -284,4 +331,8 @@ public class updateGoal extends AppCompatActivity {
         });
         builder.create().show();
     }
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> 04e8260 (Add all files again)
