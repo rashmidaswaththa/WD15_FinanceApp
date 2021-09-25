@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/2nd year/2 nd semester/MAD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_rem_report.xml" value="0.33" />
-        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/expense_row_record.xml" value="0.8" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_add_income.xml" value="0.17346014492753623" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_add_rem.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_main.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/activity_main_income.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/expense_row_record.xml" value="0.152" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_goal.xml" value="0.2" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_income.xml" value="0.536" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_rem.xml" value="0.2" />

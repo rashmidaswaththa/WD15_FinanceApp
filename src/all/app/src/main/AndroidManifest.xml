@@ -19,7 +19,7 @@
             android:name=".addExpenseActivity"
             android:exported="true" />
         <activity
-            android:name=".MainExpenseActivity"
+            android:name=".MainIncomeActivity"
             android:exported="true" />
         <activity
             android:name=".updateGoalActivity"
@@ -37,7 +37,7 @@
             android:name=".addRemActivity"
             android:exported="true" />
         <activity
-            android:name=".MainIncomeActivity"
+            android:name=".MainRemActivity"
             android:exported="true" />
         <activity
             android:name=".updateIncomeActivity"
@@ -46,7 +46,7 @@
             android:name=".addIncomeActivity"
             android:exported="true" />
         <activity
-            android:name=".MainRemActivity"
+            android:name=".MainExpenseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
