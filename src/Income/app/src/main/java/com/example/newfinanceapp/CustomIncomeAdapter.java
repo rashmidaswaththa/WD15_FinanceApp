@@ -1,9 +1,6 @@
 package com.example.newfinanceapp;
 
-<<<<<<< HEAD
 import android.annotation.SuppressLint;
-=======
->>>>>>> 04e8260 (Add all files again)
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -18,24 +15,20 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
+public class CustomIncomeAdapter extends RecyclerView.Adapter<CustomIncomeAdapter.MyViewHolder> {
 
     private Context context;
     private Activity activity;
     private ArrayList income_id, income_note, income_amount, income_category;
 
-<<<<<<< HEAD
     Animation translate_anim;
 
-=======
->>>>>>> 04e8260 (Add all files again)
-    CustomAdapter(Activity activity, Context context, ArrayList income_id, ArrayList income_note, ArrayList income_amount, ArrayList income_category){
+    CustomIncomeAdapter(Activity activity, Context context, ArrayList income_id, ArrayList income_note, ArrayList income_amount, ArrayList income_category){
 
         this.activity = activity;
         this.context = context;
@@ -48,18 +41,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from((context));
-        View view = inflater.inflate(R.layout.my_row, parent, false);
+        View view = inflater.inflate(R.layout.my_row_income, parent, false);
         return new MyViewHolder(view);
 
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-<<<<<<< HEAD
     public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-=======
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
->>>>>>> 04e8260 (Add all files again)
         holder.in_id_txt.setText(String.valueOf(income_id.get(position)));
         holder.in_note_txt.setText(String.valueOf(income_note.get(position)));
         holder.in_amount_txt.setText(String.valueOf(income_amount.get(position)));
@@ -97,14 +86,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             in_amount_txt = itemView.findViewById(R.id.in_amount_txt);
             in_cat_txt = itemView.findViewById(R.id.in_cat_txt);
             mainLayout = itemView.findViewById(R.id.mainLayout);
+
             //Animate Recyclerview
-<<<<<<< HEAD
             Animation translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
             mainLayout.setAnimation(translate_anim);
-=======
-            //Animation translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
-           // mainLayout.setAnimation(translate_anim);
->>>>>>> 04e8260 (Add all files again)
         }
     }
 }

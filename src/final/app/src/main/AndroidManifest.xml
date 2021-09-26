@@ -40,7 +40,7 @@
             android:name=".addExpenseActivity"
             android:exported="true" />
         <activity
-            android:name=".MainIncomeActivity"
+            android:name=".MainRemActivity"
             android:exported="true" />
         <activity
             android:name=".updateGoalActivity"
@@ -58,10 +58,11 @@
             android:name=".addRemActivity"
             android:exported="true" />
         <activity
-            android:name=".MainRemActivity"
+            android:name=".MainIncomeActivity"
             android:exported="true" />
         <activity
             android:name=".updateIncomeActivity"
+
             android:exported="true" />
         <activity
             android:name=".addIncomeActivity"

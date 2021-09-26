@@ -1,5 +1,6 @@
 package com.example.newfinanceapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,13 +12,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class updateIncomeActivity extends AppCompatActivity {
 
     EditText note_input, amount_input, category_input;
     Button update_button;
-    ImageButton back_button2 , delete_button;
 
     String id, note, amount, category;
 
@@ -30,17 +32,21 @@ public class updateIncomeActivity extends AppCompatActivity {
         amount_input = findViewById(R.id.updateField2_text);
         category_input = findViewById(R.id.updateField3_text);
         update_button = findViewById(R.id.update_button);
-        back_button2 = findViewById(R.id.back_button2);
-        delete_button = findViewById(R.id.delete_button);
+
+        //Tool bar
+        ImageButton left_arrow1 = findViewById(R.id.left_arrow1);
+        ImageView check = findViewById(R.id.check);
+        TextView title = findViewById(R.id.title);
+        ImageButton clear = findViewById(R.id.clear);
 
         //First we call this
         getAndSetIntentData();
 
         //Set actionbar title after getAndSetIntentData method
-        /*ActionBar ab = getSupportActionBar();
+        ActionBar ab = getSupportActionBar();
         if (ab != null) {
-            ab.setTitle(title);
-        }*/
+            ab.setTitle(category);
+        }
 
         category_input.setEnabled(false);
 
@@ -48,25 +54,44 @@ public class updateIncomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //And only then we call this
-                MyDatabaseHelper myDB = new MyDatabaseHelper(updateIncomeActivity.this);
+                /*MyDatabaseHelper myDB = new MyDatabaseHelper(updateIncomeActivity.this);
                 note = note_input.getText().toString().trim();
                 amount = amount_input.getText().toString().trim();
                 category = category_input.getText().toString().trim();
-                myDB.updateData(id, note, amount, category);
-            }
-        });
-        delete_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                confirmDialog();
+                myDB.updateData(id, note, amount, category);*/
+
+                String note = note_input.getText().toString();
+                String amount = amount_input.getText().toString();
+
+                //making a function for validation and pass all parameters
+                boolean  check= validateinfo(note,amount);
+                if (check == true) {
+                    //And only then we call this
+                    MyDatabaseHelper myDB = new MyDatabaseHelper(updateIncomeActivity.this);
+                    note = note_input.getText().toString().trim();
+                    amount = amount_input.getText().toString().trim();
+                    category = category_input.getText().toString().trim();
+                    myDB.updateData(id, note, amount, category);
+                    Toast.makeText(getApplicationContext(),"Updated Succesfully",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-        back_button2.setOnClickListener(new View.OnClickListener() {
+        left_arrow1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (updateIncomeActivity.this, MainIncomeActivity.class);
+                Intent intent = new Intent(updateIncomeActivity.this, MainIncomeActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                confirmDialog();
             }
         });
 
@@ -85,13 +110,11 @@ public class updateIncomeActivity extends AppCompatActivity {
             note_input.setText(note);
             amount_input.setText(amount);
             category_input.setText(category);
-            Log.d("stev", note+" "+amount+" "+category);
+            Log.d("", note+" "+amount+" "+category);
         }else{
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 
    void confirmDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -112,5 +135,29 @@ public class updateIncomeActivity extends AppCompatActivity {
             }
         });
         builder.create().show();
+    }
+
+    //validation
+    private boolean validateinfo(String incomeNote, String incomeAmount) {
+        if (incomeNote.length() == 0) {
+            note_input.requestFocus();
+            note_input.setError("THIS FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!incomeNote.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            note_input.requestFocus();
+            note_input.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+            return false;
+        } else if (incomeAmount.length() == 0) {
+            amount_input.requestFocus();
+            amount_input.setError("FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!incomeAmount.matches("\\d+")) {
+            amount_input.requestFocus();
+            amount_input.setError("PLEASE ENTER NUMBERS");
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }

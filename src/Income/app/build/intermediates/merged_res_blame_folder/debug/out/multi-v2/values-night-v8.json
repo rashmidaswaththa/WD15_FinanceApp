@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\MADD\\newFinanceApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\MADD\\Academics\\WD15_FinanceApp\\src\\Income\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\singer\\.gradle\\caches\\transforms-3\\25012fcc08d4c5cf5a2844c1a21a6fbe\\transformed\\material-1.4.0\\res\\values-night-v8\\values-night-v8.xml",
@@ -38,14 +38,14 @@
                     }
                 },
                 {
-                    "source": "D:\\MADD\\newFinanceApp\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "D:\\MADD\\Academics\\WD15_FinanceApp\\src\\Income\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "100",
+                        "startOffsets": "102",
                         "endLines": "14",
                         "endColumns": "12",
-                        "endOffsets": "820"
+                        "endOffsets": "834"
                     },
                     "to": {
                         "startLines": "25",

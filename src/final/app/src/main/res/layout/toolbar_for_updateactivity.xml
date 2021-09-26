@@ -35,7 +35,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="42dp"
             android:contentDescription="@string/save_button"
-            android:src="@drawable/ic_outline_check_24" />
+            android:src="@drawable/ic_outline_check_24"
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/left_arrow1"

@@ -101,13 +101,9 @@
     </string-array>
 
     <string-array name="expense_category">
-        <item>Health</item>
-        <item>Food</item>
-        <item>Education</item>
-        <item>Family</item>
-        <item>Clothes</item>
-        <item>Loans</item>
-        <item>Home Office</item>
+        <item>Housing</item>
+        <item>Personal spending</item>
+        <item>Health care</item>
         <item>Other</item>
     </string-array>
 

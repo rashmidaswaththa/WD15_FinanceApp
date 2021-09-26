@@ -57,4 +57,13 @@
         <string name="add_field_text3" />
         <string name="add_form_toggle_text" />
         <string name="add_form_field4">Repeat transaction</string>
+
+    <string name="toolbar_displaylist_verticon">vertiv=cal_navigation</string>
+
+    //income
+    <string name="incometext">Gain Total Control Of Your Money</string>
+    <string name="incometext2">Become your own money manager and Improve your personal finances</string>
+    <string name="incomebtn">Next</string>
+    <string name="incomebtn2">Back</string>
+    <string name="incomeimg">incomeimage</string>
 </resources>

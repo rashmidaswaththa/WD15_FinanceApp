@@ -49,7 +49,7 @@ public class addExpenseActivity extends AppCompatActivity {
 
 
         //date base connection
-        DB = new MyDatabaseHelper(this);
+        MyDatabaseHelper DB = new MyDatabaseHelper(addExpenseActivity.this);
 
 
         left_arrow.setOnClickListener(new View.OnClickListener() {
@@ -64,21 +64,34 @@ public class addExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String expenseNote = note_text.getText().toString();
+                String expenseAmount = amount_text.getText().toString();
 
-                String note = note_text.getText().toString().trim();
-                String amount = amount_text.getText().toString().trim();
-                String pay = method_text.getSelectedItem().toString().trim();
-                String cat = category_text.getSelectedItem().toString().trim();
+                //making a function for validation and pass all parameters
+                boolean  check= validateinfo(expenseNote,expenseAmount);
 
-                //byte[] image = onActivityResult(requestCode, resultCode, data).image;
-                boolean insert = DB.insertData(note, amount, pay, cat);
+                if (check == true) {
 
-                if (insert) {
-                    Toast.makeText(addExpenseActivity.this, "Inserted Successfully", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(addExpenseActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
+                    //when data are in valid formats, input data to the databaase
+                    String note = note_text.getText().toString().trim();
+                    String amount = amount_text.getText().toString().trim();
+                    String pay = method_text.getSelectedItem().toString().trim();
+                    String cat = category_text.getSelectedItem().toString().trim();
+
+                    boolean insert = DB.insertData(note, amount, pay, cat);
+
+                    if(insert==true){
+                        Toast.makeText(addExpenseActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(addExpenseActivity.this, "Error!!" , Toast.LENGTH_SHORT).show();
+                    }
+
+                    Toast.makeText(getApplicationContext(), "Data is valid",Toast.LENGTH_SHORT).show();
                 }
-
+                else {
+                    Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
@@ -94,7 +107,29 @@ public class addExpenseActivity extends AppCompatActivity {
 
     }
 
-
+    //validation
+    private boolean validateinfo(String expenseNote, String expenseAmount) {
+        if (expenseNote.length() == 0) {
+            note_text.requestFocus();
+            note_text.setError("THIS FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!expenseNote.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            note_text.requestFocus();
+            note_text.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+            return false;
+        } else if (expenseAmount.length() == 0) {
+            amount_text.requestFocus();
+            amount_text.setError("FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!expenseAmount.matches("\\d+")) {
+            amount_text.requestFocus();
+            amount_text.setError("PLEASE ENTER NUMBERS");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 }
 
 

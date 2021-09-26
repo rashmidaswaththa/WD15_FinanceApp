@@ -16,7 +16,61 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e72bbc6b-4e34-470e-95db-2f6b3e01e75c" name="Default Changelist" comment="" />
+    <list default="true" id="e72bbc6b-4e34-470e-95db-2f6b3e01e75c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/newfinanceapp/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/newfinanceapp/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/CustomAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/MainActivity2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/MainActivity3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/MainActivity4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/MainIncomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/MainIncomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/MyIncomeDatabaseHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/SearchAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/SearchAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/addIncomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/addIncomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/updateIncomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newfinanceapp/updateIncomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_income.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_income.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_income.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_income.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_update_income.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_update_income.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/my_row.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/toolbar_for_displaylist_income.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/toolbar_income.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/toolbar_income.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/MainExpenseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/MainExpenseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/MainGoalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/MainGoalActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/MainRemActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/MainRemActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/addGoalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/addGoalActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/addIncomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/addIncomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/addRemActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/addRemActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/updateExpenseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/updateExpenseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/updateGoalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/updateGoalActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/updateIncomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/updateIncomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/updateRemActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/java/com/example/newfinanceapp/updateRemActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_add_goal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_add_goal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_add_income.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_add_income.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_add_rem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_add_rem.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_update_goal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_update_goal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_update_income.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_update_income.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_update_reminder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/activity_update_reminder.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar_for_updateactivity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar_for_updateactivity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar_goal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar_goal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar_income.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar_income.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar_rem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../final/app/src/main/res/layout/toolbar_rem.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +92,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1yIep0GlyL75cGK6twKVSPDgoje" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,6 +104,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android-custom-viewC:/Users/singer/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_RecyclerView_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewC:/Users/singer/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
@@ -54,6 +113,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MADD\Academics\WD15_FinanceApp\src\Income\app\src\main\res\drawable" />
       <recent name="D:\MADD\newFinanceApp\app\src\main\res\drawable" />
     </key>
     <key name="android.template.1183088591">
@@ -136,5 +196,16 @@
       <updated>1631943708414</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
