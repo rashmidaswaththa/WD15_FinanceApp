@@ -58,7 +58,8 @@ public class MainRemActivity extends AppCompatActivity {
         left_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainRemActivity.this, "You clicked in left icon" , Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainRemActivity.this, DashboardActivity.class);
+                startActivity(intent);
             }
         });
 

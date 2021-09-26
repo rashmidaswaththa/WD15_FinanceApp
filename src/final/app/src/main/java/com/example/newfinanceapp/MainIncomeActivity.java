@@ -57,7 +57,8 @@ public class MainIncomeActivity extends AppCompatActivity {
         left_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainIncomeActivity.this, "You clicked in left icon" , Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainIncomeActivity.this, DashboardActivity.class);
+                startActivity(intent);
             }
         });
 

@@ -78,7 +78,7 @@ public class updateGoalActivity extends AppCompatActivity {
                     name = name_input.getText().toString().trim();
                     amount = amount_input.getText().toString().trim();
                     description = description_input.getText().toString().trim();
-                    myDB.updateData(id, name, amount, description);
+                    myDB.updateDataGoal(id, name, amount, description);
                     Toast.makeText(getApplicationContext(),"Updated Succesfully",Toast.LENGTH_SHORT).show();
                 }
                 else {

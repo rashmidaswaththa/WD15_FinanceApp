@@ -102,26 +102,32 @@ public class addGoalActivity extends AppCompatActivity {
     //validation
     private boolean validateinfo(String name, String amount, String description) {
         if (name.length() == 0) {
+            //Checking for null goal name inputs
             goalNameInput.requestFocus();
             goalNameInput.setError("THIS FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!name.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //checking for relevant input types for the field
             goalNameInput.requestFocus();
             goalNameInput.setError("ENTER ONLY ALPHABETICAL CHARACTER");
             return false;
         } else if (amount.length() == 0) {
+            //Checking for null goal amount inputs
             goalAmountInput.requestFocus();
             goalAmountInput.setError("FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!amount.matches("\\d+")) {
+            //checking for relevant input types for the field
             goalAmountInput.requestFocus();
             goalAmountInput.setError("PLEASE ENTER NUMBERS");
             return false;
         } else if (description.length() == 0) {
+            //Checking for null goal description inputs
             goalDesInput.requestFocus();
             goalDesInput.setError("FILED CAN NOT BE EMPTY");
             return false;
         } else if (!description.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //checking for relevant input types for the field
             goalDesInput.requestFocus();
             goalDesInput.setError("ENTER ONLY ALPHABETICAL CHARACTER");
             return false;

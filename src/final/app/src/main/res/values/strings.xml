@@ -82,6 +82,7 @@
     <string name="goaldescriptionupdate">Goal Description</string>
 
 
+
     <string name="title_displaylist_expense">All Expenses</string>
     <string name="expense_note">Note</string>
     <string name="addExpense_field2">Amount</string>
@@ -137,5 +138,6 @@
 
     <string name="nav_drawer_open">Open navigation drawer</string>
     <string name="nav_drawer_close">Close navigation drawer</string>
+    <string name="goalTool">Manage Goals</string>
 
 </resources>
