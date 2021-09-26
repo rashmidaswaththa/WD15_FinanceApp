@@ -63,11 +63,14 @@ public class ExpenseDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+<<<<<<< HEAD
     void deleteAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_NAME);
     }
 
+=======
+>>>>>>> 04e8260 (Add all files again)
     public Cursor readAllData() {
         String query = "SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();

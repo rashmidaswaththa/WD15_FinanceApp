@@ -1,6 +1,9 @@
 package com.example.newfinanceapp;
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint;
+=======
+>>>>>>> 04e8260 (Add all files again)
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -27,15 +30,20 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private Activity activity;
     private ArrayList goal_id, goal_name, goal_amount, goal_description;
 
+<<<<<<< HEAD
     //Animation translate_anim;
 
     CustomAdapter(Activity activity, Context context, ArrayList goal_id, ArrayList goal_name, ArrayList goal_amount, ArrayList goal_description){
+=======
+    CustomAdapter(Activity activity, Context context, ArrayList goal_id, ArrayList goal_name, ArrayList goal_amount, ArrayList goal_desc){
+>>>>>>> 04e8260 (Add all files again)
 
         this.activity = activity;
         this.context = context;
         this.goal_id = goal_id;
         this.goal_name = goal_name;
         this.goal_amount = goal_amount;
+<<<<<<< HEAD
         this.goal_description = goal_description;
     }
     @NonNull
@@ -135,6 +143,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         this.goal_name = goal_name;
         this.goal_amount = goal_amount;
         this.goal_description = goal_description;
+=======
+        this.goal_desc = goal_description;
+>>>>>>> 04e8260 (Add all files again)
     }
     @NonNull
     @Override
@@ -151,16 +162,28 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         holder.goal_id_txt.setText(String.valueOf(goal_id.get(position)));
         holder.goal_name_txt.setText(String.valueOf(goal_name.get(position)));
         holder.goal_amount_txt.setText(String.valueOf(goal_amount.get(position)));
+<<<<<<< HEAD
         holder.goal_desc_txt.setText(String.valueOf(goal_description.get(position)));
+=======
+        holder.goal_desc_txt.setText(String.valueOf(goal_desc.get(position)));
+>>>>>>> 04e8260 (Add all files again)
         //Recyclerview onClickListener
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 Intent intent = new Intent(context, updateGoal.class);
                 intent.putExtra("id", String.valueOf(goal_id.get(position)));
                 intent.putExtra("name", String.valueOf(goal_name.get(position)));
                 intent.putExtra("amount", String.valueOf(goal_amount.get(position)));
                 intent.putExtra("description", String.valueOf(goal_description.get(position)));
+=======
+                Intent intent = new Intent(context, updateIncomeActivity.class);
+                intent.putExtra("id", String.valueOf(goal_id.get(position)));
+                intent.putExtra("name", String.valueOf(goal_name.get(position)));
+                intent.putExtra("amount", String.valueOf(goal_amount.get(position)));
+                intent.putExtra("description", String.valueOf(goal_desc.get(position)));
+>>>>>>> 04e8260 (Add all files again)
                 activity.startActivityForResult(intent, 1);
             }
         });
@@ -170,7 +193,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @Override
     public int getItemCount()
     {
+<<<<<<< HEAD
         return goal_id.size();
+=======
+        return income_id.size();
+>>>>>>> 04e8260 (Add all files again)
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -187,11 +214,19 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             mainLayout = itemView.findViewById(R.id.mainLayout);
             //Animate Recyclerview
             //Animation translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
+<<<<<<< HEAD
            //mainLayout.setAnimation(translate_anim);
         }
     }
 }
 */
+=======
+           // mainLayout.setAnimation(translate_anim);
+        }
+    }
+}
+
+>>>>>>> 04e8260 (Add all files again)
 
 
 
