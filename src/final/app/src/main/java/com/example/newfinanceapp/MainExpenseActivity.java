@@ -109,8 +109,8 @@ public class MainExpenseActivity extends AppCompatActivity {
             empty_imageview.setVisibility(View.GONE);
             no_data.setVisibility(View.GONE);
         }
-
     }
+
 }
 
 

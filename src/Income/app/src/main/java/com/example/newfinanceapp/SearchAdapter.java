@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -37,7 +36,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> {
     @Override
     public SearchViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView = inflater.inflate(R.layout.my_row,parent, false);
+        View itemView = inflater.inflate(R.layout.my_row_income,parent, false);
         return new SearchViewHolder(itemView);
     }
 

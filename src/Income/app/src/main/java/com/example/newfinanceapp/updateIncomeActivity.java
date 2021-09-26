@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class updateIncomeActivity extends AppCompatActivity {
@@ -31,30 +33,39 @@ public class updateIncomeActivity extends AppCompatActivity {
         amount_input = findViewById(R.id.updateField2_text);
         category_input = findViewById(R.id.updateField3_text);
         update_button = findViewById(R.id.update_button);
-        back_button2 = findViewById(R.id.back_button2);
-        delete_button = findViewById(R.id.delete_button);
+        /*back_button2 = findViewById(R.id.back_button2);
+        delete_button = findViewById(R.id.delete_button);*/
+
+        //Tool bar
+        ImageButton left_arrow1 = findViewById(R.id.left_arrow1);
+        ImageView check = findViewById(R.id.check);
+        TextView title = findViewById(R.id.title);
+        ImageButton clear = findViewById(R.id.clear);
 
         //First we call this
         getAndSetIntentData();
 
         //Set actionbar title after getAndSetIntentData method
-        /*ActionBar ab = getSupportActionBar();
+        ActionBar ab = getSupportActionBar();
         if (ab != null) {
-            ab.setTitle(title);
-        }*/
+            ab.setTitle(category);
+        }
+
+        category_input.setEnabled(false);
 
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //And only then we call this
-                MyIncomeDatabaseHelper myDB = new MyIncomeDatabaseHelper(updateIncomeActivity.this);
+                MyDatabaseHelper myDB = new MyDatabaseHelper(updateIncomeActivity.this);
                 note = note_input.getText().toString().trim();
                 amount = amount_input.getText().toString().trim();
                 category = category_input.getText().toString().trim();
                 myDB.updateData(id, note, amount, category);
             }
         });
-        delete_button.setOnClickListener(new View.OnClickListener() {
+
+        /*delete_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 confirmDialog();
@@ -66,6 +77,21 @@ public class updateIncomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent (updateIncomeActivity.this, MainIncomeActivity.class);
                 startActivity(intent);
+            }
+        });*/
+
+        left_arrow1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(updateIncomeActivity.this, MainIncomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                confirmDialog();
             }
         });
 
@@ -99,7 +125,7 @@ public class updateIncomeActivity extends AppCompatActivity {
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                MyIncomeDatabaseHelper myDB = new MyIncomeDatabaseHelper(updateIncomeActivity.this);
+                MyDatabaseHelper myDB = new MyDatabaseHelper(updateIncomeActivity.this);
                 myDB.deleteOneRow(id);
                 finish();
             }

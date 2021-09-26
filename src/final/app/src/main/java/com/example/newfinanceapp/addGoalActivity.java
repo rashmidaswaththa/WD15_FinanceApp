@@ -17,18 +17,18 @@ public class addGoalActivity extends AppCompatActivity {
     //Initialize Variables
     EditText goalNameInput, goalAmountInput, goalDesInput;
     Button add_button;
-    ImageButton back_button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_goal);
 
         //Assign Variables
+        //Goal insert form
         goalNameInput = findViewById(R.id.addField1_text);
         goalAmountInput = findViewById(R.id.addField2_text);
         goalDesInput = findViewById(R.id.addFeild_text3);
         add_button = findViewById(R.id.add_button);
-        back_button = findViewById((R.id.back_button));
 
         add_button.setOnClickListener(new View.OnClickListener(){
 
@@ -69,21 +69,6 @@ public class addGoalActivity extends AppCompatActivity {
 
         });
 
-         back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent (addGoalActivity.this, MainGoalActivity.class);
-                startActivity(intent);
-            }
-         });
-
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent (addGoalActivity.this, MainGoalActivity.class);
-                startActivity(intent);
-            }
-        });
 
         ImageView left_arrow = findViewById(R.id.left_arrow);
         ImageView check = findViewById(R.id.check);
@@ -100,6 +85,14 @@ public class addGoalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(addGoalActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        left_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(addGoalActivity.this, MainGoalActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -128,13 +121,14 @@ public class addGoalActivity extends AppCompatActivity {
             goalDesInput.requestFocus();
             goalDesInput.setError("FILED CAN NOT BE EMPTY");
             return false;
-        } else if (!name.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
-            goalNameInput.requestFocus();
-            goalNameInput.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+        } else if (!description.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            goalDesInput.requestFocus();
+            goalDesInput.setError("ENTER ONLY ALPHABETICAL CHARACTER");
             return false;
         }
         else {
             return true;
         }
     }
+
 }

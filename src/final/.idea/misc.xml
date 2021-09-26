@@ -14,11 +14,17 @@
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/all/app/src/main/res/layout/my_row_rem.xml" value="0.2" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.24027777777777778" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_add_goal.xml" value="0.22592592592592592" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_add_income.xml" value="0.152" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_add_rem.xml" value="0.22592592592592592" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_main.xml" value="0.22592592592592592" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_main_goal.xml" value="0.22592592592592592" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_main_income.xml" value="0.14166666666666666" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_main_rem.xml" value="0.14166666666666666" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_second.xml" value="0.14166666666666666" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_update_expense.xml" value="0.3541666666666667" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_update_goal.xml" value="0.2" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_update_income.xml" value="0.14166666666666666" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/activity_update_reminder.xml" value="0.14166666666666666" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/app_main.xml" value="0.22592592592592592" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/dashboard_header.xml" value="0.22592592592592592" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/dashboard_main.xml" value="0.22592592592592592" />
@@ -28,6 +34,12 @@
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/intro_income.xml" value="0.22592592592592592" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/my_row_goal.xml" value="0.22592592592592592" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/piechart_main.xml" value="0.14166666666666666" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/toolbar.xml" value="0.264" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/toolbar_for_displaylist.xml" value="0.14166666666666666" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/toolbar_for_updateactivity.xml" value="0.2" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/toolbar_goal.xml" value="0.2" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/toolbar_income.xml" value="0.264" />
+        <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/layout/toolbar_rem.xml" value="0.176" />
         <entry key="..\:/MADD/Academics/WD15_FinanceApp/src/final/app/src/main/res/menu/dashboard_main_menu.xml" value="0.14166666666666666" />
         <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_add.xml" value="0.19583333333333333" />
         <entry key="..\:/MADD/newFinanceApp/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2703125" />

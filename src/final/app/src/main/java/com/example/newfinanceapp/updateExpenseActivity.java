@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -58,6 +59,12 @@ public class updateExpenseActivity extends AppCompatActivity {
         //First we call this
         getAndSetIntentData();
 
+        //Set actionbar title after getAndSetIntentData method
+        ActionBar ab = getSupportActionBar();
+        if (ab != null) {
+            ab.setTitle(category);
+        }
+
         left_arrow1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,13 +79,32 @@ public class updateExpenseActivity extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myDB = new MyDatabaseHelper(updateExpenseActivity.this);
+                /*myDB = new MyDatabaseHelper(updateExpenseActivity.this);
                 note = note_text.getText().toString().trim();
                 amount = amount_text.getText().toString().trim();
                 method = method_text.getText().toString().trim();
                 category = category_text.getText().toString().trim();
-                myDB.updateDataExpense(id, note, amount, method, category);
+                myDB.updateDataExpense(id, note, amount, method, category);*/
 
+                String note = note_text.getText().toString();
+                String amount = amount_text.getText().toString();
+
+
+                //making a function for validation and pass all parameters
+                boolean  check= validateinfo(note,amount);
+                if (check == true) {
+                    //And only then we call this
+                    MyDatabaseHelper myDB = new MyDatabaseHelper(updateExpenseActivity.this);
+                    note = note_text.getText().toString().trim();
+                    amount = amount_text.getText().toString().trim();
+                    method = method_text.getText().toString().trim();
+                    category = category_text.getText().toString().trim();
+                    myDB.updateDataExpense(id, note, amount, method, category);
+                    Toast.makeText(getApplicationContext(),"Updated Succesfully",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -96,7 +122,7 @@ public class updateExpenseActivity extends AppCompatActivity {
                 getIntent().hasExtra("amount") && getIntent().hasExtra("method") && getIntent().hasExtra("category")) {
             //Getting Data from Intent
             //Intent intent = new Intent (context, UpdateExpenseActivity.class);
-             id= getIntent().getStringExtra("id");
+            id= getIntent().getStringExtra("id");
             note = getIntent().getStringExtra("note");
             amount = getIntent().getStringExtra("amount");
             method = getIntent().getStringExtra("method");
@@ -109,7 +135,7 @@ public class updateExpenseActivity extends AppCompatActivity {
             method_text.setText(method);
             category_text.setText(category);
 
-            Log.d("stev", note+" "+amount+" "+method+" "+category);
+            Log.d("", note+" "+amount+" "+method+" "+category);
         } else {
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }
@@ -136,8 +162,30 @@ public class updateExpenseActivity extends AppCompatActivity {
             }
         });
         builder.create().show();
-
     }
 
+    //validation
+    private boolean validateinfo(String expenseNote, String expenseAmount) {
+        if (expenseNote.length() == 0) {
+            note_text.requestFocus();
+            note_text.setError("THIS FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!expenseNote.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            note_text.requestFocus();
+            note_text.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+            return false;
+        } else if (expenseAmount.length() == 0) {
+            amount_text.requestFocus();
+            amount_text.setError("FIELD CAN NOT BE EMPTY");
+            return false;
+        } else if (!expenseAmount.matches("\\d+")) {
+            amount_text.requestFocus();
+            amount_text.setError("PLEASE ENTER NUMBERS");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 
 }
