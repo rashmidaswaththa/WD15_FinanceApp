@@ -8,8 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,14 +19,12 @@ import java.util.ArrayList;
 
 public class MainRemActivity extends AppCompatActivity {
 
+    //Initialize variables
     RecyclerView recyclerView;
     FloatingActionButton add;
     CustomRemAdapter customAdapter;
 
-    ImageView empty_imageview;
-    TextView no_data;
-
-    MyDatabaseHelper myDB;
+    MyRemDatabaseHelper myDB;
     ArrayList<String> rem_id, rem_type, rem_amount, rem_date;
 
 
@@ -37,19 +33,19 @@ public class MainRemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_rem);
 
-        empty_imageview = findViewById(R.id.empty_imageview);
-        no_data = findViewById(R.id.no_data);
-
+        //Assign variables
         recyclerView = findViewById(R.id.recycleView);
         add = findViewById(R.id.add_button);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Creating Intents
                 Intent intent = new Intent (MainRemActivity.this, addRemActivity.class);
                 startActivity(intent);
             }
         });
 
+        //Initialize variables
         ImageView left_arrow = findViewById(R.id.left_arrow);
         ImageView check = findViewById(R.id.check);
         ImageView clear = findViewById(R.id.clear);
@@ -58,6 +54,7 @@ public class MainRemActivity extends AppCompatActivity {
         left_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Display a toast message when you select back arrow
                 Toast.makeText(MainRemActivity.this, "You clicked in left icon" , Toast.LENGTH_SHORT).show();
             }
         });
@@ -65,6 +62,7 @@ public class MainRemActivity extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Display a toast message when data inserted to the database
                 Toast.makeText(MainRemActivity.this, "Inserted Successfully" , Toast.LENGTH_SHORT).show();
             }
         });
@@ -72,13 +70,14 @@ public class MainRemActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Display a toast message when data deleted
                 Toast.makeText(MainRemActivity.this, "Deleted Successfully" , Toast.LENGTH_SHORT).show();
             }
         });
 
-        title.setText("Manage Income");
+        title.setText("Manage Reminder");
 
-       myDB = new MyDatabaseHelper(MainRemActivity.this);
+        myDB = new MyRemDatabaseHelper(MainRemActivity.this);
         rem_id = new ArrayList<>();
         rem_type = new ArrayList<>();
         rem_amount = new ArrayList<>();
@@ -101,10 +100,9 @@ public class MainRemActivity extends AppCompatActivity {
     }
 
     void storeDataInArrays(){
-       Cursor cursor = myDB.readAllDataRem();
+       Cursor cursor = myDB.readAllData();
        if(cursor.getCount() == 0){
-           empty_imageview.setVisibility(View.VISIBLE);
-           no_data.setVisibility(View.VISIBLE);
+            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }else{
            while (cursor.moveToNext()){
                rem_id.add(cursor.getString(0));
@@ -112,16 +110,7 @@ public class MainRemActivity extends AppCompatActivity {
                rem_amount.add(cursor.getString(2));
                rem_date.add(cursor.getString(3));
             }
-           empty_imageview.setVisibility(View.GONE);
-           no_data.setVisibility(View.GONE);
        }
    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.my_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
 }

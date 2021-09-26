@@ -17,13 +17,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
+public class CustomRemAdapter extends RecyclerView.Adapter<CustomRemAdapter.MyViewHolder> {
 
     private Context context;
     private Activity activity;
     private ArrayList reminder_id, reminder_type, reminder_amount, reminder_date;
 
-    CustomAdapter(Activity activity, Context context, ArrayList reminder_id, ArrayList reminder_type, ArrayList reminder_amount, ArrayList reminder_date){
+    CustomRemAdapter(Activity activity, Context context, ArrayList reminder_id, ArrayList reminder_type, ArrayList reminder_amount, ArrayList reminder_date){
 
         this.activity = activity;
         this.context = context;
