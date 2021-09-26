@@ -71,13 +71,13 @@ public class addExpenseActivity extends AppCompatActivity {
                 boolean  check= validateinfo(expenseNote,expenseAmount);
 
                 if (check == true) {
-
                     //when data are in valid formats, input data to the databaase
                     String note = note_text.getText().toString().trim();
                     String amount = amount_text.getText().toString().trim();
                     String pay = method_text.getSelectedItem().toString().trim();
                     String cat = category_text.getSelectedItem().toString().trim();
 
+                    //Database connection
                     boolean insert = DB.insertData(note, amount, pay, cat);
 
                     if(insert==true){
@@ -92,7 +92,6 @@ public class addExpenseActivity extends AppCompatActivity {
                 else {
                     Toast.makeText(getApplicationContext(),"Sorry check information again",Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
@@ -110,18 +109,22 @@ public class addExpenseActivity extends AppCompatActivity {
     //validation
     private boolean validateinfo(String expenseNote, String expenseAmount) {
         if (expenseNote.length() == 0) {
+            //Checking for null expense note inputs
             note_text.requestFocus();
             note_text.setError("THIS FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!expenseNote.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //checking for relevant input types for the field
             note_text.requestFocus();
             note_text.setError("ENTER ONLY ALPHABETICAL CHARACTER");
             return false;
         } else if (expenseAmount.length() == 0) {
+            //Checking for null expense amount inputs
             amount_text.requestFocus();
             amount_text.setError("FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!expenseAmount.matches("\\d+")) {
+            //checking for relevant input types for the field
             amount_text.requestFocus();
             amount_text.setError("PLEASE ENTER NUMBERS");
             return false;

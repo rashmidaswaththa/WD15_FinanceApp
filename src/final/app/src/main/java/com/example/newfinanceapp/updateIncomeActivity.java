@@ -53,13 +53,6 @@ public class updateIncomeActivity extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //And only then we call this
-                /*MyDatabaseHelper myDB = new MyDatabaseHelper(updateIncomeActivity.this);
-                note = note_input.getText().toString().trim();
-                amount = amount_input.getText().toString().trim();
-                category = category_input.getText().toString().trim();
-                myDB.updateData(id, note, amount, category);*/
-
                 String note = note_input.getText().toString();
                 String amount = amount_input.getText().toString();
 
@@ -131,7 +124,6 @@ public class updateIncomeActivity extends AppCompatActivity {
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
             }
         });
         builder.create().show();

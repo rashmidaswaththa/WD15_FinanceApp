@@ -17,11 +17,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />-->
 
+
     <include
         android:id="@+id/include"
         layout="@layout/toolbar_goal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,9 +31,9 @@
         android:layout_width="196dp"
         android:layout_height="28dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="345dp"
+        android:layout_marginTop="196dp"
         android:text="@string/goalname"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,16 +41,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <EditText
         android:id="@+id/addField1_text"
-        android:layout_width="370dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="48dp"
+        android:layout_width="399dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addGoal_field1" />
 
     <TextView
@@ -57,27 +58,26 @@
         android:layout_width="292dp"
         android:layout_height="46dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="350dp"
         android:text="@string/goalamount"
+        android:textColor="@color/black"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addField1_text" />
 
     <EditText
         android:id="@+id/addField2_text"
-        android:layout_width="385dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="172dp"
+        android:layout_width="399dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addGoal_field2" />
 
@@ -86,13 +86,14 @@
         android:layout_width="307dp"
         android:layout_height="41dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="327dp"
         android:text="@string/goaldescription"
+        android:textColor="@color/black"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addField2_text" />
 
@@ -101,26 +102,26 @@
         android:layout_width="395dp"
         android:layout_height="66dp"
         android:layout_marginBottom="172dp"
-        android:backgroundTint="#74009688"
+        android:backgroundTint="@color/teal_200"
         android:text="@string/goaladd"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/addFeild_text3"
         android:layout_width="402dp"
         android:layout_height="53dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/add_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintVertical_bias="0.218" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

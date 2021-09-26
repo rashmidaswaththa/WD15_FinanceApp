@@ -97,18 +97,22 @@ public class addIncomeActivity extends AppCompatActivity {
     //validation
     private boolean validateinfo(String incomeNote, String incomeAmount) {
         if (incomeNote.length() == 0) {
+            //Checking for null income note inputs
             note_input.requestFocus();
             note_input.setError("THIS FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!incomeNote.matches("^\\s*[\\da-zA-Z][\\da-zA-Z\\s]*$")) {
+            //checking for relevant input types for the field
             note_input.requestFocus();
             note_input.setError("ENTER ONLY ALPHABETICAL CHARACTER");
             return false;
         } else if (incomeAmount.length() == 0) {
+            //Checking for null income amount inputs
             amount_input.requestFocus();
             amount_input.setError("FIELD CAN NOT BE EMPTY");
             return false;
         } else if (!incomeAmount.matches("\\d+")) {
+            //checking for relevant input types for the field
             amount_input.requestFocus();
             amount_input.setError("PLEASE ENTER NUMBERS");
             return false;

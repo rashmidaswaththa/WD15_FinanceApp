@@ -79,16 +79,8 @@ public class updateExpenseActivity extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*myDB = new MyDatabaseHelper(updateExpenseActivity.this);
-                note = note_text.getText().toString().trim();
-                amount = amount_text.getText().toString().trim();
-                method = method_text.getText().toString().trim();
-                category = category_text.getText().toString().trim();
-                myDB.updateDataExpense(id, note, amount, method, category);*/
-
                 String note = note_text.getText().toString();
                 String amount = amount_text.getText().toString();
-
 
                 //making a function for validation and pass all parameters
                 boolean  check= validateinfo(note,amount);
@@ -119,9 +111,9 @@ public class updateExpenseActivity extends AppCompatActivity {
 
     private void getAndSetIntentData() {
         if (getIntent().hasExtra("id") && getIntent().hasExtra("note") &&
-                getIntent().hasExtra("amount") && getIntent().hasExtra("method") && getIntent().hasExtra("category")) {
+                getIntent().hasExtra("amount") && getIntent().hasExtra("method") &&
+                getIntent().hasExtra("category")) {
             //Getting Data from Intent
-            //Intent intent = new Intent (context, UpdateExpenseActivity.class);
             id= getIntent().getStringExtra("id");
             note = getIntent().getStringExtra("note");
             amount = getIntent().getStringExtra("amount");
@@ -129,7 +121,6 @@ public class updateExpenseActivity extends AppCompatActivity {
             category = getIntent().getStringExtra("category");
 
             //set data
-
             note_text.setText(note);
             amount_text.setText(amount);
             method_text.setText(method);
@@ -143,7 +134,6 @@ public class updateExpenseActivity extends AppCompatActivity {
 
 
     private void confirmDialog() {
-
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete " + note + " ?");
         builder.setMessage("Are you sure you want to delete " + note + " ?");
@@ -158,7 +148,6 @@ public class updateExpenseActivity extends AppCompatActivity {
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
             }
         });
         builder.create().show();

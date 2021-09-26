@@ -61,7 +61,8 @@ public class MainExpenseActivity extends AppCompatActivity {
         left_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainExpenseActivity.this, "You clicked in left icon", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainExpenseActivity.this, DashboardActivity.class);
+                startActivity(intent);
             }
         });
 
